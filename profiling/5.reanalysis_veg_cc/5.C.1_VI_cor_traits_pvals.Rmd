@@ -1,0 +1,146 @@
+---
+title: "Eric data: VI Average"
+output: NULL
+author: "Jinliang Yang"
+date: 03-03-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# take a look at the Canopy data
+
+1. For each plot, we have about 237 genotypes including the "check" plants.
+2. For each genotype, we have multiple reps upto 8?
+3. We used 9 ways to filter the data
+- ExG135 to ExG140
+- Otsu pre
+- Otso post
+- Custom
+4. Additionally, in the table, we have Image id, Light.Value, Average.Saturation, 
+Reference.Rep (1 indicates the reference)
+
+
+### Exact data for different genotypes
+
+
+```{r}
+dn <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv")
+dn$date <- as.factor(dn$date)
+dn$date <- factor(dn$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+
+dn <- subset(dn, !(Genotype.x %in% "Check"))
+d1 <- subset(dn, Filter.Type %in% "ExG 131" & Reference.Rep == 1)
+```
+
+
+### Phenotypic data from 2019
+1. Semra data
+2. Yufeng leaf nutrient data
+
+Here is the 2018 data.  The column meanings are:
+ 
+1.      PlotID – the plot ID.  3xxx is the low nitrogen block; 4xxx is the high nitrogen block
+2.      Trt – treatment. “LN” means low nitrogen, “HN” means high nitrogen
+3.      DW – total dry weight of 3 sampled leaves per plant in gram
+4.      CHL – average chlorophyll concentrations in 3 sampled leaves per plant in umol/m2
+5.      LA – total leaf area of 3 sampled leaves per plant in cm2
+6.      FW – total fresh weight of 3 sampled leaves per plant in gram
+7.      N through Zn – leaf nutrient concentration in dry biomass basis in % or ppm
+
+```{r}
+
+### calcualte relationship between VI and leaf nutrients!
+VI_leaf <- function(g1, leaf){
+  ## combing VI and Leaf nutrient
+  df <- merge(g1, leaf, by.x="Row", by.y="Plant.id")
+  
+  ### all Veg Index
+  n1 <- which(names(g1) == "ExG")
+  n2 <- which(names(g1) == "Woebbecke..abs.")
+  VIs <- names(g1)[n1:n2]
+  
+  out <- data.frame()
+  for(d in unique(df$date)){
+    tem <- subset(df, date %in% d)
+    
+    if(nrow(tem) >0 ){
+      # for all leaf traits
+      idx1 <- which(names(tem) == "LA")
+      idx2 <- which(names(tem) == "Boron")
+
+      for(i in idx1:idx2){
+        for(vi in VIs){
+          test <- cor.test(tem[, vi], as.numeric(as.character(tem[,i])))
+          myout <- data.frame(trait=names(tem)[i], pval=test$p.value, 
+                              cor=test$estimate, type=vi, date=d)
+          out <- rbind(out, myout)
+        }
+      }
+    }
+  }
+  return(out)
+}
+
+### compute the relationship
+leaf <- read.csv("data/pheno2019/All_data_2019 Maize Havelock.csv")
+leaf <- leaf[, 1:17]
+
+pval1 <- VI_leaf(d1, leaf)
+write.table(pval1, "cache/VI_leaf_pvals_n1920_dn.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+
+Using Semra's data:
+
+```{r}
+
+
+### calcualte relationship between VI and adult phenotype!
+VI_pheno <- function(g1, p){
+  ## combing VI and Leaf nutrient
+  df <- merge(g1, p, by.x="Row", by.y="row")
+  
+  ### all Veg Index
+  n1 <- which(names(g1) == "ExG")
+  n2 <- which(names(g1) == "Woebbecke..abs.")
+  VIs <- names(g1)[n1:n2]
+  
+  out <- data.frame()
+  for(d in unique(df$date)){
+    tem <- subset(df, date %in% d)
+    
+    if(nrow(tem) >0 ){
+      # for all leaf traits
+      idx1 <- which(names(tem) == "Weight.of.20.seeds")
+      idx2 <- which(names(tem) == "cob.diameter")
+
+      for(i in idx1:idx2){
+        for(vi in VIs){
+          test <- cor.test(tem[, vi], as.numeric(as.character(tem[,i])))
+          myout <- data.frame(trait=names(tem)[i], pval=test$p.value, 
+                              cor=test$estimate, type=vi, date=d)
+          out <- rbind(out, myout)
+        }
+      }
+    }
+  }
+  return(out)
+}
+
+### compute the relationship
+p <- read.csv("data/pheno2019/2019_yield_traits.csv")
+
+pval2 <- VI_pheno(d1, p)
+write.table(pval2, "cache/VI_pheno_pvals_n480.csv", sep=",", row.names = FALSE, quote=FALSE)
+
+```
+

@@ -1,0 +1,39 @@
+---
+title: "Generate shapefiles"
+output: NULL
+author: Jinliang Yang
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+```{r}
+p2 <- read.delim("data/Plot2_improved.txt", header=TRUE)
+p2$row <- gsub(" and.*", "", p2$Row.Numbers)
+p2$treatment<- "-N"
+
+p4 <- read.delim("data/Plot4_improved.txt", header=TRUE)
+p4$row <- gsub(" and.*", "", p4$Row.Numbers)
+p4$treatment <- "+N"
+
+d <- rbind(p2, p4)
+```
+
+
+```{r}
+library(ggplot2)
+d <- subset(d, Genotype %in% "check1")
+
+ggplot(d, aes(x=treatment, y=VARI, fill=treatment, color=treatment)) +
+        facet_grid(.~Filter.Type) +
+  geom_violin(trim=FALSE) +
+# Use custom color palettes
+  scale_color_manual(values=c("#999999", "#E69F00"))+
+  scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+

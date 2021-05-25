@@ -1,0 +1,163 @@
+---
+title: "4-2 Eric data"
+output: NULL
+author: "Jinliang Yang"
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# take a look at the Canopy data
+
+1. For each plot, we have about 237 genotypes including the "check" plants.
+2. For each genotype, we have multiple reps upto 8?
+3. We used 9 ways to filter the data
+- ExG135 to ExG140
+- Otsu pre
+- Otso post
+- Custom
+4. Additionally, in the table, we have Image id, Light.Value, Average.Saturation, 
+Reference.Rep (1 indicates the reference)
+
+
+### Canopy coverage over time
+
+Here I only focus on the reference rep on Plot1.
+
+```{r}
+files <- list.files(path="largedata/Eric_Results_2-4/", pattern="Plot1_canopy", full.names = TRUE)
+p1 <- read.csv(files[1], header=TRUE)
+## understand the data structure
+length(table(p1$Genotype))
+# [1] 237
+subset(p1, Genotype == "NC326")
+
+
+## cat all the data
+out <- data.frame()
+for(i in 1:length(files)){
+  p <- read.csv(files[i], header=TRUE)
+  p <- subset(p, Reference.Rep == 1)
+  out <- rbind(out, p)
+}
+
+out$date <- gsub("_.*", "", out$Filename)
+
+
+library(ggplot2)
+
+
+g1 <- subset(out, Genotype == "check")
+
+
+p1 <- ggplot(data = g1, aes(x = date, y = Percent.Cover,  fill = Filter.Type)) +
+      #geom_smooth(model=lm) +
+      #geom_violin(trim=FALSE) +
+      geom_bar(stat="identity", position=position_dodge()) +
+  facet_grid(Filter.Type ~ .)
+p1
+
+```
+
+
+### dots + errbar
+
+```{r}
+library(ggplot2)
+library(plyr)
+df <- ddply(g1, .(date, Filter.Type), summarise,
+            m= mean(Percent.Cover),
+            sd=sd(Percent.Cover))
+
+fsize=18
+p1 <- ggplot(data = df, aes(x = date, y = m,  color = Filter.Type)) +
+      geom_line(group=1, size=2) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "Canopy Coverage")+
+      #theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ .) +
+      theme(axis.text=element_text(size=fsize),
+                axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text.y = element_text(size = fsize))
+
+p1
+
+```
+
+
+### Plot3 (-N) and Plot1 (+N)
+
+```{r}
+
+get_checks <- function(myptn="Plot3_canopy"){
+  files <- list.files(path="largedata/Eric_Results_2-4/", pattern=myptn, full.names = TRUE)
+  p1 <- read.csv(files[1], header=TRUE)
+  ## understand the data structure
+  # length(table(p1$Genotype))
+  # [1] 237
+  # subset(p1, Genotype == "NC326")
+
+
+  ## cat all the data
+  out <- data.frame()
+  for(i in 1:length(files)){
+    p <- read.csv(files[i], header=TRUE)
+    p <- subset(p, Reference.Rep == 1)
+    out <- rbind(out, p)
+  }
+  out$date <- gsub("_.*", "", out$Filename)
+  g1 <- subset(out, Genotype == "check")
+  return(g1)
+}
+
+df1 <- get_checks(myptn="Plot1_canopy")
+df1$Nitrogen <- "+N"
+df2 <- get_checks(myptn="Plot3_canopy")
+df2$Nitrogen <- "-N"
+g1 <- rbind(df1, df2)
+
+df <- ddply(g1, .(date, Filter.Type, Nitrogen), summarise,
+            m= mean(Percent.Cover),
+            sd=sd(Percent.Cover))
+
+df <- subset(df, Filter.Type %in% c("Custom", "ExG 135", "ExG 140", "Otsu post"))
+df$Filter.Type <- gsub("Otsu post", "Otsu", df$Filter.Type)
+df <- subset(df, date != "190706")
+
+fsize=18
+p3 <- ggplot(data = df, aes(x = date, y = m  )) +
+      geom_line(group=1, size=2, aes(color = Filter.Type)) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "Canopy Coverage")+
+      theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ Nitrogen) +
+      theme(axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text = element_text(size = fsize))
+
+p3
+
+```
+

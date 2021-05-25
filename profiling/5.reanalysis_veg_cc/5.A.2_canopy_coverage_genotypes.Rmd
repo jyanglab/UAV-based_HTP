@@ -1,0 +1,128 @@
+---
+title: "Canopy Coverage: cdifferent genotypes"
+output: NULL
+author: Jinliang Yang
+date: 03-23-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+### Overall data
+
+```{r}
+df0 <- read.csv("cache/canopy_coverage_master_row447720.csv")
+
+geno <- subset(df0, !(Genotype.x %in% "Check") & Reference.Rep == 1 &  Filter.Type %in% "ExG 131")
+geno <- subset(geno, Percent.Cover > 0.2)
+
+library(plyr)
+### mean coverage in plus N plots
+m1 <- ddply(geno, .(date, Treatment, Genotype.x), summarise,
+            mcov = mean(Percent.Cover))
+pn <- subset(m1, Treatment == "Nitrogen")
+names(pn)[4] <- "mcov_pn"
+pn$uid <- paste(pn$date, pn$Genotype.x, sep="_")
+
+mn <- subset(m1, Treatment == "No Nitrogen")
+names(mn)[4] <- "mcov_mn"
+mn$uid <- paste(mn$date, mn$Genotype.x, sep="_")
+
+m <- merge(pn[,c(1,3:5)], mn[,4:5], by="uid")
+m$ratio <- m$mcov_pn/m$mcov_mn
+
+
+# avg ratio across
+avg <- ddply(m, .(Genotype.x), summarise,
+             mean=mean(ratio))
+avg$type <- "unresponsive"
+avg[avg$mean > 1.5,]$type <- "positive"
+avg[avg$mean < 1, ]$type <- "negative"
+
+```
+
+
+```{r}
+library(ggplot2)
+fsize=18
+
+p1 <- ggplot(avg, aes(x=mean)) +
+  #facet_grid(Filter.Type ~ .) +
+  geom_histogram(color="black", fill="lightblue", bins = 30,
+                 linetype="dashed") +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  # geom_boxplot(width=.1, outlier.colour=NA) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_vline(xintercept=1, linetype="dashed", 
+                color = "red") +
+  geom_vline(xintercept=1.5, linetype="dashed", 
+                color = "red") +
+  xlab("") +
+  ylab("Ratio of Canopy Coverage (+N/-N)") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p1
+```
+
+
+
+
+```{r}
+library(ggplot2)
+fsize=18
+
+m2 <- merge(m, avg[, c("Genotype.x", "type")], by="Genotype.x")
+#m2 <- subset(m2, ratio < 2.5) 
+
+m2$date <- factor(m2$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+p2 <- ggplot(m2, aes(x=factor(date), y=ratio, group=Genotype.x, color=type)) +
+  #facet_grid(Filter.Type ~ .) +
+  geom_line(size=0.5) +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  # geom_boxplot(width=.1, outlier.colour=NA) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("") +
+  ylab("Canopy Coverage (+N/-N)") +
+  geom_hline(yintercept=1, linetype="dashed", 
+                color = "red") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p2
+```
+
+
+```{r}
+library("cowplot")
+
+# arrange two plots into one column
+pdf("graphs/canopy_coverage_genotypes.pdf", width=12, height = 10)
+plot_grid(
+  p1, p2,
+  labels = c('A', 'B'), label_size = 20, ncol = 1
+)
+dev.off()
+```
+

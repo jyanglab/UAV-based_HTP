@@ -1,0 +1,187 @@
+---
+title: "4-2 Eric data"
+output: NULL
+author: "Jinliang Yang"
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# take a look at the Canopy data
+
+1. For each plot, we have about 237 genotypes including the "check" plants.
+2. For each genotype, we have multiple reps upto 8?
+3. We used 9 ways to filter the data
+- ExG135 to ExG140
+- Otsu pre
+- Otso post
+- Custom
+4. Additionally, in the table, we have Image id, Light.Value, Average.Saturation, 
+Reference.Rep (1 indicates the reference)
+
+
+# Vegation Index over time
+
+### Plot3 (-N) and Plot1 (+N)
+```{r}
+getwd()
+```
+
+```{r}
+
+get_checks <- function(myptn="Plot3_canopy"){
+  files <- list.files(path="largedata/Eric_Results_2-4/", pattern=myptn, full.names = TRUE)
+  p1 <- read.csv(files[1], header=TRUE)
+  ## understand the data structure
+  # length(table(p1$Genotype))
+  # [1] 237
+  # subset(p1, Genotype == "NC326")
+
+
+  ## cat all the data
+  out <- data.frame()
+  for(i in 1:length(files)){
+    p <- read.csv(files[i], header=TRUE)
+    p <- subset(p, Reference.Rep == 1)
+    out <- rbind(out, p)
+  }
+  out$date <- gsub("_.*", "", out$Filename)
+  g1 <- subset(out, Genotype == "check")
+  return(g1)
+}
+
+df1 <- get_checks(myptn="Plot1_average")
+df1$Nitrogen <- "+N"
+df2 <- get_checks(myptn="Plot3_average")
+df2$Nitrogen <- "-N"
+g1 <- rbind(df1, df2)
+
+
+library(ggplot2)
+library(plyr)
+
+g2 <- subset(g1, date != "190706")
+df <- ddply(g2, .(date, Filter.Type, Nitrogen), summarise,
+            m= mean(VARI, na.rm=TRUE),
+            sd=sd(VARI, na.rm=TRUE))
+
+df <- subset(df, Filter.Type %in% c("Custom", "ExG 135", "ExG 140", "Otsu post"))
+df$Filter.Type <- gsub("Otsu post", "Otsu", df$Filter.Type)
+
+fsize=18
+p3 <- ggplot(data = df, aes(x = date, y = m  )) +
+      geom_line(group=1, size=2, aes(color = Filter.Type)) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "VARI")+
+      theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ Nitrogen) +
+      theme(axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text = element_text(size = fsize))
+
+p3
+
+```
+
+```{r}
+# ExG       RGB        NGR
+# GLI       MGR      VARI      VEG Woebbecke..no.abs. Woebbecke..abs
+df <- ddply(g2, .(date, Filter.Type, Nitrogen), summarise,
+            m= mean(ExG),
+            sd=sd(ExG))
+
+fsize=18
+p3 <- ggplot(data = df, aes(x = date, y = m  )) +
+      geom_line(group=1, size=2, aes(color = Filter.Type)) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "ExG")+
+      theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ Nitrogen) +
+      theme(axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text = element_text(size = fsize))
+
+p3
+
+```
+
+```{r}
+# ExG       RGB        NGR
+# GLI       MGR      VARI      VEG Woebbecke..no.abs. Woebbecke..abs
+df <- ddply(g2, .(date, Filter.Type, Nitrogen), summarise,
+            m= mean(Woebbecke..abs.),
+            sd=sd(Woebbecke..abs.))
+
+fsize=18
+p3 <- ggplot(data = df, aes(x = date, y = m  )) +
+      geom_line(group=1, size=2, aes(color = Filter.Type)) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "Woebbecke (abs)")+
+      theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ Nitrogen) +
+      theme(axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text = element_text(size = fsize))
+
+p3
+
+```
+
+```{r}
+# ExG       RGB        NGR
+# GLI       MGR      VARI      VEG Woebbecke..no.abs. Woebbecke..abs
+df <- ddply(g2, .(date, Filter.Type, Nitrogen), summarise,
+            m= mean(MGR),
+            sd=sd(MGR))
+
+fsize=18
+p3 <- ggplot(data = df, aes(x = date, y = m  )) +
+      geom_line(group=1, size=2, aes(color = Filter.Type)) +
+      geom_point()+
+      geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+      labs(title="", x="Dates", y = "MGR")+
+      theme_classic() +
+      # scale_color_manual(values=c('#999999','#E69F00'))
+      facet_grid(Filter.Type ~ Nitrogen) +
+      theme(axis.title=element_text(size=fsize, face="bold"),
+                legend.title = element_text(size=fsize, face="bold"),
+                legend.text = element_text(size=fsize),
+            axis.text.x = element_text(face="bold", color="#993333", 
+                           size=20, angle=45),
+            axis.text.y = element_text(face="bold",
+                           size=14),
+            strip.text = element_text(size = fsize))
+
+p3
+
+```

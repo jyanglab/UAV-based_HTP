@@ -1,0 +1,56 @@
+---
+title: "Canopy Coverage"
+output: NULL
+author: Jinliang Yang
+date: 03-02-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# Phenological stage
+Time series
+
+### NE
+
+```{r}
+getdf <- function(indir="data/CanopyCoverage/NE"){
+  files <- list.files(path=indir, pattern="canopy", full.names = TRUE)
+  df <- data.frame()
+  for(i in 1:length(files)){
+    tem <- read.csv(files[i], header=T)
+    tem$file <- files[i]
+    df <- rbind(df, tem)
+  }
+  df$date <- gsub(".*sat_|.csv|_merged", "", df$file)
+  df$date <- factor(df$date,
+    levels = c("J6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30", "Sept1", "Sept3", "Sept5"))
+  return(df)
+}
+
+#ch1 <- subset(ch, Row.Numbers %in% "1065 and 1066" & Reference.Rep == 1 )
+
+p1 <- getdf(indir="data/CanopyCoverage/NE")
+p2 <- getdf(indir="data/CanopyCoverage/NW")
+p3 <- getdf(indir="data/CanopyCoverage/SE")
+p4 <- getdf(indir="data/CanopyCoverage/SW")
+
+df <- rbind(p1, p2, p3, p4)
+
+### Merge with the field book
+df$Row <- gsub(" .*", "", df$Row.Numbers)
+
+fb <- read.csv("data/CRRI_2019_Field_Book_final.csv", header=TRUE)
+df0 <- merge(df, fb, by="Row", all.x=TRUE)
+
+df0$date <- as.character(df0$date)
+df0[df0$date == "J6", ]$date <- "July6"
+write.table(df0, "cache/canopy_coverage_master_row447720.csv", sep=",", row.names=FALSE, quote=FALSE)
+```
+
+

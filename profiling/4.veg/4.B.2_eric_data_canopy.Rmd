@@ -1,0 +1,71 @@
+---
+title: "Generate shapefiles"
+output: NULL
+author: Jinliang Yang
+date: 09-14-2020
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# Phenological stage
+Time series
+
+### NE
+
+```{r}
+getdf <- function(indir="data/Eric_Results_9-6/NE"){
+  files <- list.files(path=indir, pattern="canopy", full.names = TRUE)
+  df <- data.frame()
+  for(i in 1:length(files)){
+    tem <- read.csv(files[i], header=T)
+    tem$file <- files[i]
+    df <- rbind(df, tem)
+  }
+  df$date <- gsub(".*sat_|.csv", "", df$file)
+  df$date <- factor(df$date,
+    levels = c("J6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30", "Sept1", "Sept3", "Sept5"))
+  return(df)
+}
+
+#ch1 <- subset(ch, Row.Numbers %in% "1065 and 1066" & Reference.Rep == 1 )
+
+p1 <- getdf(indir="data/Eric_Results_9-6/NE")
+p2 <- getdf(indir="data/Eric_Results_9-6/NW")
+p3 <- getdf(indir="data/Eric_Results_9-6/SE")
+p4 <- getdf(indir="data/Eric_Results_9-6/SW")
+
+df <- rbind(p1, p2, p3, p4)
+
+
+```
+
+### Plot
+
+```{r}
+df$Row <- gsub(" .*", "", df$Row.Numbers)
+
+fb <- read.csv("data/CRRI_2019_Field_Book_final.csv", header=TRUE)
+df <- merge(df, fb, by="Row", all.x=TRUE)
+
+chall <- subset(df, Genotype.x %in% "Check")
+chall$Rep <- as.factor(chall$Rep)
+
+ggplot(chall, aes(x=date, y=Percent.Cover, fill=Treatment, colour=Rep)) +
+        facet_grid(Filter.Type ~ .) +
+  geom_violin(trim=FALSE) +
+  #geom_point(size=2, shape=23) +
+  #geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+
+
+

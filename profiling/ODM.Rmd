@@ -1,0 +1,66 @@
+---
+title: "Open Drone Map"
+output: html_notebook
+---
+
+
+This method is the fastest and most fool-proof method for running OpenDroneMap. You only need to run one command:
+
+```{bash, eval=FALSE}
+docker run -it --rm -v "$(pwd)/images:/code/images" -v "$(pwd)/odm_orthophoto:/code/odm_orthophoto" -v "$(pwd)/odm_georeferencing:/code/odm_georeferencing" opendronemap/opendronemap --mesh-size 100000
+```
+
+This will pull an ODM docker image from the hub and run through it. Let's break down each part.
+
+```{bash, eval=FALSE}
+docker run -it --rm
+```
+
+-it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container. 
+--rm will remove the container to save space (ODM projects can get big)
+
+```{bash, eval=FALSE}
+-v $(pwd)/images:/code/images -v $(pwd)/odm_orthophoto:/code/odm_orthophoto -v $(pwd)/odm_georeferencing:/code/odm_georeferencing
+```
+Here we are connecting 3 volumes. The path before the colon is the local, or host, path, and after the colon is the container path. 
+Do not change the container path. 
+`$(pwd)/images` is your input directory. and can be any absolute path. 
+In our example, we use `$(pwd)` as shorthand for the absolute path to the current working directory. 
+You can specify -v <path>:<path> any number of times. When ODM is done running, you can find the ODM products in $(pwd)/odm_georeferencing or whatever volume you mount.
+
+```{bash, eval=FALSE}
+opendronemap/opendronemap
+```
+This is the tag that docker will use to find the OpenDroneMap image. If it is not found locally (i.e. it's your first time running) then it will look on Docker Hub and pull the image.
+
+```{bash, eval=FALSE}
+--mesh-size 10000
+```
+Here is where you can pass in any parameter for OpenDroneMap. See here for all the possible parameters.
+
+-------------------------
+
+
+## Test with subset of the images
+
+```{bash, eval=FALSE}
+docker run -it --rm -v "$(pwd)/test-photo:/code/images" -v "$(pwd)/odm_orthophoto:/code/odm_orthophoto" -v "$(pwd)/odm_georeferencing:/code/odm_georeferencing" opendronemap/opendronemap --mesh-size 100000
+```
+
+
+```{bash}
+docker run -it --rm \
+    -v $(pwd)/test-photo:/code/images \
+    -v $(pwd)/odm_meshing:/code/odm_meshing \
+    -v $(pwd)/odm_orthophoto:/code/odm_orthophoto \
+    -v $(pwd)/odm_georeferencing:/code/odm_georeferencing \
+    -v $(pwd)/odm_texturing:/code/odm_texturing \
+    -v $(pwd)/opensfm:/code/opensfm \
+    -v $(pwd)/pmvs:/code/pmvs \
+    opendronemap/opendronemap -r odm_orthophoto
+    
+```
+
+--orthophoto-resolution 500.0
+
+

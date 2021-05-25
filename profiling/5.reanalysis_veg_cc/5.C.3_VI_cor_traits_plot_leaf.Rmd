@@ -1,0 +1,172 @@
+---
+title: "Eric data: VI Average"
+output: NULL
+author: "Jinliang Yang"
+date: 03-03-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+## Summary of the pvals
+
+```{r}
+library(plyr)
+leaf <- read.csv("cache/VI_leaf_pvals_n1920.csv")
+sum1 <- ddply(leaf, .(date), summarise,
+             mean_r=mean(abs(cor), na.rm=TRUE),
+             med_r=median(abs(cor), na.rm=TRUE))
+# Aug12
+# Aug26
+leaf1 <- subset(leaf, date == "Aug12")
+
+p <- read.csv("cache/VI_pheno_pvals_n480.csv")
+sum2 <- ddply(p, .(date), summarise,
+             mean_r=mean(abs(cor), na.rm=TRUE),
+             med_r=median(abs(cor), na.rm=TRUE))
+# Aug23
+p1 <- subset(p, date == "Aug23")
+```
+
+
+
+# Vegation Index over time
+
+```{r}
+df0 <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv")
+
+df1 <- subset(df0, Filter.Type %in% "ExG 131" & date == "Aug22")
+
+leaf <- read.csv("data/pheno2019/All_data_2019 Maize Havelock.csv")
+leaf <- leaf[, 1:17]
+dp <- merge(df1, leaf, by.x="Row", by.y="Plant.id")
+
+```
+
+
+```{r}
+library("tidyr")
+idx1 <- which(names(dp) == "ExG")
+idx2 <- which(names(dp) == "Woebbecke..abs.")
+
+t1 <- which(names(dp) == "LA")
+t2 <- which(names(dp) == "Boron")
+d0 <- dp[, c("Row","Treatment",  names(dp)[t1:t2], names(dp)[idx1:idx2])]
+
+d <- gather(d0, key=index, value=value, 19:ncol(d0))
+
+```
+
+
+
+
+
+```{r}
+getp1 <- function(d, ti="LA"){
+  fsize=18
+
+  p1 <- ggplot(d, aes(x=value, y=d[, ti])) +
+  facet_wrap(~index, scales="free") +
+  geom_point(aes(color=Treatment)) +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_smooth() +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("") +
+  ylab(ti) +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+  p1
+}
+
+d$Chl <- as.numeric(as.character(d$Chl) )
+
+pdf("graphs/leaf_VI.pdf", width=10, height=10)
+for(i in 3:17){
+  print(getp1(d, ti=names(d)[i]))
+}
+dev.off()
+```
+
+
+### Select some traits
+
+```{r}
+library(ggplot2)
+w <- subset(d, index %in% "Woebbecke..abs.")
+
+
+w$value <- w$value*1000
+w <- subset(w, value < 40)
+fit_la <- lm(LA ~ value, data=w)
+
+pla <- ggplot(w, aes(x=value, y=LA/100)) +
+  geom_point(aes(color=Treatment)) +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_smooth(method = "lm") +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("Woebbecke") +
+  ylab("Leaf Area") +
+  scale_color_manual(values=c("#E69F00", "#56B4E9"), name = "",labels = c("+N", "-N")) +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "none", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+pla
+
+save(file="cache/Woebbecke_LA.RData", list=c("pla", "w", "fit_la"))
+```
+
+
+```{r}
+library(ggplot2)
+n <- subset(d, index %in% "VEG")
+
+
+n$value <- n$value*1000
+#w <- subset(w, value < 40)
+fit_n <- lm(Nitrogen ~ value, data=n)
+
+pn <- ggplot(n, aes(x=value, y=Nitrogen)) +
+  geom_point(aes(color=Treatment)) +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_smooth(method = "lm") +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("VEG") +
+  ylab("Nitrogen") +
+  scale_color_manual(values=c("#E69F00", "#56B4E9"), name = "",labels = c("+N", "-N")) +
+  #geom_text(x=3, y=4, label="y=0.46+0.56x") +
+  #geom_text(x=3, y=3.8, label="r: 0.73") +
+  # geom_text(x=3, y=3.6, label="P-value < 2.2e-16") +
+  guides(color = guide_legend(override.aes = list(size=5))) +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = c(0.8,0.2), 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+pn
+
+save(file="cache/VEG_n.RData", list=c("pn", "n", "fit_n"))
+```

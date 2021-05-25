@@ -1,0 +1,19 @@
+---
+title: "Connect to Anvil"
+output: html_notebook
+---
+
+
+1. Connecting with the Cisco Client
+
+2. Login into the [web](https://anvil.unl.edu)  
+  - See here how to [laugh an instance](https://hcc-docs.unl.edu/display/HCCDOC/Creating+an+Instance)
+  - If you have one, re-connect it via [here](https://hcc-docs.unl.edu/display/HCCDOC/Creating+an+Instance)
+
+
+
+## Reconnect to an existing one, ie. ArcGIS-large
+
+1. Connecting with Cisco Client
+2. Click the Microsoft Remote Desktop
+

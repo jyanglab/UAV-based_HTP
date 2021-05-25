@@ -1,0 +1,18 @@
+---
+title: "Connect to Anvil"
+output: html_notebook
+date: 04-29-2019
+author: "Jinliang Yang"
+---
+
+
+meters
+Plot Length:	6.096
+Plot Width:	1.524
+SubPlot Width:	0.7645
+	
+Plot Area:	9.290304
+SubPlot Area:	4.660392
+	
+When plant height was less than the modeled surface, the cells were eliminated (i.e null)	
+

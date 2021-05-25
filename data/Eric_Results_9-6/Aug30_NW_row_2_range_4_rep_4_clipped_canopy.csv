@@ -1,0 +1,5 @@
+Filename,Plot,Row Numbers,Filter Type,Genotype,Image,Light Value,Average Saturation,Reference Rep,Pixels Remaining,Total,Percent Cover
+190830_djifc6310s_Aug30_NW_row_2_range_4_rep_4_isref_1 (clipped).tif,190830_djifc6310s_Aug30_NW_row_2_range_4,2281 and 2282,ExG 131,Check,DJI_0130.JPG,11.95455985,34.63146612,1,138564,212639,65.16396334
+190830_djifc6310s_Aug30_NW_row_2_range_4_rep_4_isref_1 (clipped).tif,190830_djifc6310s_Aug30_NW_row_2_range_4,2281 and 2282,Otsu pre,Check,DJI_0130.JPG,11.95455985,37.12067021,1,113122,212639,53.19908389
+190830_djifc6310s_Aug30_NW_row_2_range_4_rep_4_isref_1 (clipped).tif,190830_djifc6310s_Aug30_NW_row_2_range_4,2281 and 2282,Otsu post,Check,DJI_0130.JPG,11.95455985,37.27071776,1,111542,212639,52.45604052
+190830_djifc6310s_Aug30_NW_row_2_range_4_rep_4_isref_1 (clipped).tif,190830_djifc6310s_Aug30_NW_row_2_range_4,2281 and 2282,Custom,Check,DJI_0130.JPG,11.95455985,34.91281782,1,132839,212639,62.47160681

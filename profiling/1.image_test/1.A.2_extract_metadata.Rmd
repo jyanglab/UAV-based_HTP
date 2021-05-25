@@ -1,0 +1,135 @@
+---
+title: "Image Data 101: extract metadata"
+output: html_notebook
+author: Jinliang Yang
+date: 02-18-2019
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+#knitr::opts_chunk$set(eval = FALSE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+#install.packages("exifr")
+#install.packages("leaflet")
+
+```
+
+[Modern Statistics for Modern Biology](http://web.stanford.edu/class/bios221/book/Chap-Images.html#Chap:Images). 
+
+[Geo-code](http://chris35wills.github.io/links/)
+
+## Packages used:
+```{r}
+# install.packages("devtools")
+# devtools::install_github("paleolimbot/exifr")
+library(exifr)
+library(dplyr)
+library(leaflet)
+```
+
+## files:
+```{r}
+files <- list.files(path= "largedata/Complete_Havelock_Drone_Days/East_7-1-18", pattern = "JPG", full.names = TRUE)
+length(files) # 479
+j <- read_exif(files)
+
+idx <- which(names(j)  %in% c("PreviewImage", "ThumbnailImage"))
+j <- j[, -idx]
+write.table(j, "cache/East_7-1-18_metadata.txt", sep="\t", row.names = FALSE, quote=FALSE)
+```
+```{r}
+files <- list.files(path= "largedata/Complete_Havelock_Drone_Days/West_7-1-18", pattern = "JPG", full.names = TRUE)
+length(files) # 492
+j <- read_exif(files)
+
+idx <- which(names(j)  %in% c("PreviewImage", "ThumbnailImage"))
+j <- j[, -idx]
+write.table(j, "cache/West_7-1-18_metadata.txt", sep="\t", row.names = FALSE, quote=FALSE)
+```
+
+
+
+
+
+## files:
+```{r}
+files <- list.files(path= "data/Havelock_West/", pattern = "JPG", full.names = TRUE)
+dat <- read_exif(files)
+dat
+write.table(dat, "cache/temp_metadata.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+
+
+
+
+
+
+# Chapter 11: Image Data
+
+EBImage currently supports three image file formats: `jpeg`, `png` and `tiff`. 
+
+```{r}
+## try http:// if https:// URLs are not supported
+
+# source("https://bioconductor.org/biocLite.R")
+# biocLite("EBImage")
+
+library("EBImage")
+
+files <- list.files(path="data/Havelock_West/", pattern="JPG", full.names = TRUE)
+p <- readImage(files[1])
+
+```
+
+
+## 11.3 Displaying images
+
+```{r}
+display(p)
+
+
+display(p, method = "raster")
+text(x = 85, y = 800, label = "A corn plot",
+     adj = 0, col = "orange", cex = 1.5)
+
+dim(p)
+hist(p)
+
+p
+```
+
+
+```{r}
+nuc = readImage(system.file("images", "nuclei.tif",
+                            package = "EBImage"))
+
+display(1 - nuc, method = "raster", all = TRUE)
+```
+
+
+## 11.6 Manupulating images
+
+Normalization
+```{r}
+n <- normalize(-p)
+display(p)
+```
+
+
+## 11.8 Linear Filters
+
+```{r}
+mosqrot   = EBImage::rotate(p, angle = 30)
+mosqshift = translate(mosq, v = c(40, 70))
+mosqflip  = flip(mosq)
+mosqflop  = flop(mosq)
+
+display(p)
+
+apply(p, 3, range)
+```
+
+

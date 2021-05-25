@@ -1,0 +1,90 @@
+---
+title: "Eric data: VI Average"
+output: NULL
+author: "Jinliang Yang"
+date: 03-04-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# Vegation Index over time
+
+```{r}
+df0 <- read.csv("cache/VI_average_fb2019_n46364_ref.csv")
+
+df1 <- subset(df0, Filter.Type %in% "ExG 131" & date == "Aug12")
+
+leaf <- read.csv("data/pheno2019/All_data_2019 Maize Havelock.csv")
+leaf <- leaf[, 1:17]
+leaf$Nu <- leaf$Nitrogen/leaf$LA
+dp <- merge(df1, leaf, by.x="Row", by.y="Plant.id")
+
+dp[,11] <- dp[,11]/dp$Average.Saturation/dp$Light.Value
+dp[,12] <- dp[,12]/dp$Average.Saturation/dp$Light.Value
+dp[,13] <- dp[,13]/dp$Average.Saturation/dp$Light.Value
+dp[,14] <- dp[,14]/dp$Average.Saturation/dp$Light.Value
+dp[,15] <- dp[,15]/dp$Average.Saturation/dp$Light.Value
+dp[,16] <- dp[,16]/dp$Average.Saturation/dp$Light.Value
+dp[,17] <- dp[,17]/dp$Average.Saturation/dp$Light.Value
+dp[,18] <- dp[,18]/dp$Average.Saturation/dp$Light.Value
+dp[,19] <- dp[,19]/dp$Average.Saturation/dp$Light.Value
+dp[,20] <- dp[,20]/dp$Average.Saturation/dp$Light.Value
+
+```
+
+
+```{r}
+library("tidyr")
+idx1 <- which(names(dp) == "ExG")
+idx2 <- which(names(dp) == "Woebbecke..abs.")
+
+t1 <- which(names(dp) == "LA")
+t2 <- which(names(dp) == "Nu")
+d0 <- dp[, c("Row","Treatment",  names(dp)[t1:t2], names(dp)[idx1:idx2])]
+
+d <- gather(d0, key=index, value=value, 20:ncol(d0))
+
+```
+
+
+
+
+
+```{r}
+library(ggplot2)
+getp1 <- function(d, ti="LA"){
+  fsize=18
+
+  p1 <- ggplot(d, aes(x=value, y=d[, ti])) +
+  facet_wrap(~index, scales="free") +
+  geom_point(aes(color=Treatment)) +
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_smooth() +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("") +
+  ylab(ti) +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+  p1
+}
+
+print(getp1(d, ti=names(d)[7]))
+
+print(getp1(d, ti=names(d)[3]))
+```
+
+

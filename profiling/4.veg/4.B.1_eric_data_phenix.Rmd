@@ -1,0 +1,159 @@
+---
+title: "Generate shapefiles"
+output: NULL
+author: Jinliang Yang
+date: 09-14-2020
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+Four quadrants using Phenix!
+
+Four filter.Type
+ Custom   ExG 131 Otsu post  Otsu pre
+ 
+ 
+## North East
+
+Checking data quality!
+
+```{r}
+files <- list.files("data/Eric_Results_9-6/NE", pattern="canopy", full.names = TRUE)
+
+p <- read.csv(files[1], header=TRUE)
+p$Row <- gsub(" .*", "", p$Row.Numbers)
+
+fb <- read.csv("data/CRRI_2019_Field_Book_final.csv", header=TRUE)
+p <- merge(p, fb, by="Row", all.x=TRUE)
+
+### checking genotype consistency
+p$Genotype.x <- as.character(p$Genotype.x)
+p$Genotype.y <- as.character(p$Genotype.y)
+
+test1 <- subset(p, Genotype.x != Genotype.y)
+
+
+ch <- subset(p, Genotype.x %in% "Check")
+
+ch1 <- subset(ch, Row %in% "1017")
+
+
+library(ggplot2)
+ggplot(ch, aes(x=Light.Value, y=Percent.Cover, color=Filter.Type)) +
+       # facet_grid(.~Filter.Type) +
+  #geom_violin(trim=FALSE) +
+   geom_point(size=2, shape=23) +
+  geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+```{r}
+fit <- lm(Percent.Cover ~ Average.Saturation, data=ch)
+ggplot(ch, aes(x=Average.Saturation, y=Percent.Cover, color=Filter.Type)) +
+       # facet_grid(.~Filter.Type) +
+  #geom_violin(trim=FALSE) +
+   geom_point(size=2, shape=23) +
+  geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+
+
+## Time series
+
+### NE
+
+```{r}
+files <- list.files("data/Eric_Results_9-6/NE", pattern="canopy", full.names = TRUE)
+
+df <- data.frame()
+
+for(i in 1:length(files)){
+  tem <- read.csv(files[i], header=T)
+  tem$file <- files[i]
+  df <- rbind(df, tem)
+}
+
+df$date <- gsub(".*sat_|.csv", "", df$file)
+
+ch <- subset(df, Genotype %in% "Check")
+
+ch$date <- factor(ch$date,
+  levels = c("J6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30", "Sept1", "Sept3", "Sept5"))
+
+#ch1 <- subset(ch, Row.Numbers %in% "1065 and 1066" & Reference.Rep == 1 )
+
+ch1 <- ch
+ggplot(ch, aes(x=date, y=Percent.Cover, color=Filter.Type)) +
+        facet_grid(Filter.Type ~ .) +
+  geom_violin(trim=FALSE) +
+  #geom_point(size=2, shape=23) +
+  #geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+
+### SE
+
+```{r}
+files <- list.files("data/Eric_Results_9-6/SE", pattern="canopy", full.names = TRUE)
+
+df <- data.frame()
+
+for(i in 1:length(files)){
+  tem <- read.csv(files[i], header=T)
+  tem$file <- files[i]
+  df <- rbind(df, tem)
+}
+
+df$date <- gsub(".*sat_|.csv", "", df$file)
+
+ch <- subset(df, Genotype %in% "Check")
+
+
+ch$date <- factor(ch$date,
+  levels = c("J6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30", "Sept1", "Sept3", "Sept5"))
+
+#ch1 <- subset(ch, Row.Numbers %in% "1065 and 1066" & Reference.Rep == 1 )
+
+ch2 <- ch
+ggplot(ch, aes(x=date, y=Percent.Cover, color=Filter.Type)) +
+        facet_grid(Filter.Type ~ .) +
+  geom_violin(trim=FALSE) +
+  #geom_point(size=2, shape=23) +
+  #geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+
+
+```{r}
+ch1$n <- "+N"
+ch2$n <- "-N"
+chall <- rbind(ch1, ch2)
+
+ggplot(chall, aes(x=date, y=Percent.Cover, fill=n)) +
+        facet_grid(Filter.Type ~ .) +
+  geom_violin(trim=FALSE) +
+  #geom_point(size=2, shape=23) +
+  #geom_smooth(method=lm) +
+# Use custom color palettes
+  # scale_color_manual(values=c("#999999", "#E69F00"))+
+  # scale_fill_manual(values=c("#999999", "#E69F00")) +
+  theme_classic()
+```
+

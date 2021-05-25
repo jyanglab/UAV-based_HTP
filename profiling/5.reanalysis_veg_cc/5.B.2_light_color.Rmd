@@ -1,0 +1,100 @@
+---
+title: "ELight and Color Saturation"
+output: NULL
+author: "Jinliang Yang"
+date: 03-18-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# Vegation Index over time
+
+```{r}
+df0 <- read.csv("cache/VI_average_fb2019_n46364_ref.csv")
+# select check and reference rep
+check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1 & Filter.Type %in% "ExG 131")
+
+```
+
+
+#### Plot check plants
+
+```{r}
+library(ggplot2)
+library(tidyr)
+
+d1 <- check
+d1$date <- as.factor(d1$date)
+
+idx <- names(d1)[11:20]
+df1 <- gather(d1[, c("date", "Treatment", "Rep", idx)], key=VI, value=value,4:13)
+
+subset(check, !(date %in% "July6"))
+#### Function to get the plots
+
+fsize=18
+dodge <- position_dodge(width = 0.6)
+p1 <- ggplot(subset(check, !(date %in% "July6")), aes(x=date, y=Light.Value)) +
+  # facet_grid(VI ~ .) +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9")) +
+  xlab("") +
+  ylab("Light Value") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p1
+
+```
+
+```{r}
+fsize=18
+dodge <- position_dodge(width = 0.6)
+p2 <- ggplot(subset(check, !(date %in% "July6")), aes(x=date, y=Average.Saturation)) +
+  # facet_grid(VI ~ .) +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9")) +
+  xlab("") +
+  ylab("Color Saturation") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p2
+
+subset(check, date %in% "July6")$Average.Saturation
+```
+
+
+```{r}
+library("cowplot")
+
+# arrange two plots into one column
+pdf("graphs/light_color_check_plants.pdf", width=12, height = 8)
+plot_grid(
+  p1, p2,
+  labels = c('A', 'B'), label_size = 20, ncol = 1
+)
+dev.off()
+```

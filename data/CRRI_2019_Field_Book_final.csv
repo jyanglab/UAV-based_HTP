@@ -1,0 +1,2017 @@
+Row,Pedigree,Genotype,Treatment,Rep
+1001,Ames 19311,A641,Nitrogen,1
+1002,Ames 19311,A641,Nitrogen,1
+1003,PI 550483,B76,Nitrogen,1
+1004,PI 550483,B76,Nitrogen,1
+1005,PI 587141,A654,Nitrogen,1
+1006,PI 587141,A654,Nitrogen,1
+1007,Ames 23405,A239,Nitrogen,1
+1008,Ames 23405,A239,Nitrogen,1
+1009,PI 587143,A682,Nitrogen,1
+1010,PI 587143,A682,Nitrogen,1
+1011,Ames 19313,C123,Nitrogen,1
+1012,Ames 19313,C123,Nitrogen,1
+1013,PI 587138,A554,Nitrogen,1
+1014,PI 587138,A554,Nitrogen,1
+1015,Ames 27111,EP1,Nitrogen,1
+1016,Ames 27111,EP1,Nitrogen,1
+1017,Check,Check,Nitrogen,1
+1018,Check,Check,Nitrogen,1
+1019,PI 257507,F7,Nitrogen,1
+1020,PI 257507,F7,Nitrogen,1
+1021,PI 686057,I29,Nitrogen,1
+1022,PI 686057,I29,Nitrogen,1
+1023,Ames 27105,CO106,Nitrogen,1
+1024,Ames 27105,CO106,Nitrogen,1
+1025,Ames 24734,MS153,Nitrogen,1
+1026,Ames 24734,MS153,Nitrogen,1
+1027,Ames 20140,Mt42,Nitrogen,1
+1028,Ames 20140,Mt42,Nitrogen,1
+1029,PI 531085,NC262,Nitrogen,1
+1030,PI 531085,NC262,Nitrogen,1
+1031,PI 550566,N192,Nitrogen,1
+1032,PI 550566,N192,Nitrogen,1
+1033,Ames 19016,Va59,Nitrogen,1
+1034,Ames 19016,Va59,Nitrogen,1
+1035,Ames 27142,NC292,Nitrogen,1
+1036,Ames 27142,NC292,Nitrogen,1
+1037,PI 524969,SD44,Nitrogen,1
+1038,PI 524969,SD44,Nitrogen,1
+1039,Ames 19330,W182B,Nitrogen,1
+1040,Ames 19330,W182B,Nitrogen,1
+1041,Check,Check,Nitrogen,1
+1042,Check,Check,Nitrogen,1
+1043,Ames 21512,CI31A,Nitrogen,1
+1044,Ames 21512,CI31A,Nitrogen,1
+1045,PI 606329,DE1,Nitrogen,1
+1046,PI 606329,DE1,Nitrogen,1
+1047,Check,Check,Nitrogen,1
+1048,Check,Check,Nitrogen,1
+1049,Ames 19309,A635,Nitrogen,1
+1050,Ames 19309,A635,Nitrogen,1
+1051,Check,Check,Nitrogen,1
+1052,Check,Check,Nitrogen,1
+1053,Ames 19284,C103,Nitrogen,1
+1054,Ames 19284,C103,Nitrogen,1
+1055,Ames 27112,F2834T,Nitrogen,1
+1056,Ames 27112,F2834T,Nitrogen,1
+1057,Check,Check,Nitrogen,1
+1058,Check,Check,Nitrogen,1
+1059,Ames 27260,Ki44,Nitrogen,1
+1060,Ames 27260,Ki44,Nitrogen,1
+1061,Ames 27141,NC290A,Nitrogen,1
+1062,Ames 27141,NC290A,Nitrogen,1
+1063,PI 520774,NC264,Nitrogen,1
+1064,PI 520774,NC264,Nitrogen,1
+1065,Check,Check,Nitrogen,1
+1066,Check,Check,Nitrogen,1
+1067,Ames 27172,NC352,Nitrogen,1
+1068,Ames 27172,NC352,Nitrogen,1
+1069,Ames 27147,NC302,Nitrogen,1
+1070,Ames 27147,NC302,Nitrogen,1
+1071,NSL 30053,W22,Nitrogen,1
+1072,NSL 30053,W22,Nitrogen,1
+1073,Check,Check,Nitrogen,1
+1074,Check,Check,Nitrogen,1
+1075,Check,Check,Nitrogen,1
+1076,Check,Check,Nitrogen,1
+1077,PI 587152,W64A,Nitrogen,1
+1078,PI 587152,W64A,Nitrogen,1
+1079,Check,Check,Nitrogen,1
+1080,Check,Check,Nitrogen,1
+1081,Ames 27181,NC370,Nitrogen,1
+1082,Ames 27181,NC370,Nitrogen,1
+1083,PI 686065,SA24,Nitrogen,1
+1084,PI 686065,SA24,Nitrogen,1
+1101,Ames 19316,CM174,Nitrogen,1
+1102,Ames 19316,CM174,Nitrogen,1
+1103,PI 608774,B75,Nitrogen,1
+1104,PI 608774,B75,Nitrogen,1
+1105,Ames 22443,A188,Nitrogen,1
+1106,Ames 22443,A188,Nitrogen,1
+1107,PI 594046,B103,Nitrogen,1
+1108,PI 594046,B103,Nitrogen,1
+1109,Check,Check,Nitrogen,1
+1110,Check,Check,Nitrogen,1
+1111,PI 587139,A619,Nitrogen,1
+1112,PI 587139,A619,Nitrogen,1
+1113,Ames 27067,C49A,Nitrogen,1
+1114,Ames 27067,C49A,Nitrogen,1
+1115,Ames 27135,MEF156-55-2,Nitrogen,1
+1116,Ames 27135,MEF156-55-2,Nitrogen,1
+1117,Ames 20190,CM37,Nitrogen,1
+1118,Ames 20190,CM37,Nitrogen,1
+1119,PI 587135,Ia5125,Nitrogen,1
+1120,PI 587135,Ia5125,Nitrogen,1
+1121,Ames 27104,CMV3,Nitrogen,1
+1122,Ames 27104,CMV3,Nitrogen,1
+1123,PI 686063,IDS91,Nitrogen,1
+1124,PI 686063,IDS91,Nitrogen,1
+1125,Ames 27107,CO255,Nitrogen,1
+1126,Ames 27107,CO255,Nitrogen,1
+1127,Ames 27070,CM7,Nitrogen,1
+1128,Ames 27070,CM7,Nitrogen,1
+1129,Ames 27154,NC316,Nitrogen,1
+1130,Ames 27154,NC316,Nitrogen,1
+1131,Check,Check,Nitrogen,1
+1132,Check,Check,Nitrogen,1
+1133,PI 587154,W153R,Nitrogen,1
+1134,PI 587154,W153R,Nitrogen,1
+1135,Ames 27162,NC332,Nitrogen,1
+1136,Ames 27162,NC332,Nitrogen,1
+1137,Ames 19288,Oh43,Nitrogen,1
+1138,Ames 19288,Oh43,Nitrogen,1
+1139,Check,Check,Nitrogen,1
+1140,Check,Check,Nitrogen,1
+1141,Ames 19326,R168,Nitrogen,1
+1142,Ames 19326,R168,Nitrogen,1
+1143,Ames 27087,CML220,Nitrogen,1
+1144,Ames 27087,CML220,Nitrogen,1
+1145,PI 608766,B79,Nitrogen,1
+1146,PI 608766,B79,Nitrogen,1
+1147,PI 587131,HP301,Nitrogen,1
+1148,PI 587131,HP301,Nitrogen,1
+1149,Ames 27120,Il677a,Nitrogen,1
+1150,Ames 27120,Il677a,Nitrogen,1
+1151,Ames 27083,CML154Q,Nitrogen,1
+1152,Ames 27083,CML154Q,Nitrogen,1
+1153,PI 594047,B104,Nitrogen,1
+1154,PI 594047,B104,Nitrogen,1
+1155,Ames 19319,H95,Nitrogen,1
+1156,Ames 19319,H95,Nitrogen,1
+1157,Ames 12731,NC230,Nitrogen,1
+1158,Ames 12731,NC230,Nitrogen,1
+1159,Ames 12734,NC236,Nitrogen,1
+1160,Ames 12734,NC236,Nitrogen,1
+1161,Ames 27137,N6,Nitrogen,1
+1162,Ames 27137,N6,Nitrogen,1
+1163,Ames 28366,N7A,Nitrogen,1
+1164,Ames 28366,N7A,Nitrogen,1
+1165,Ames 27164,NC336,Nitrogen,1
+1166,Ames 27164,NC336,Nitrogen,1
+1167,Ames 27158,NC324,Nitrogen,1
+1168,Ames 27158,NC324,Nitrogen,1
+1169,Ames 27175,NC358,Nitrogen,1
+1170,Ames 27175,NC358,Nitrogen,1
+1171,Ames 27184,Pa762,Nitrogen,1
+1172,Ames 27184,Pa762,Nitrogen,1
+1173,Ames 19323,Oh7B,Nitrogen,1
+1174,Ames 19323,Oh7B,Nitrogen,1
+1175,PI 587151,Va102,Nitrogen,1
+1176,PI 587151,Va102,Nitrogen,1
+1177,Ames 8399,W117HT,Nitrogen,1
+1178,Ames 8399,W117HT,Nitrogen,1
+1179,PI 573098,Oh603,Nitrogen,1
+1180,PI 573098,Oh603,Nitrogen,1
+1181,Ames 27183,Oh43E,Nitrogen,1
+1182,Ames 27183,Oh43E,Nitrogen,1
+1183,Ames 27185,Pa875,Nitrogen,1
+1184,Ames 27185,Pa875,Nitrogen,1
+1201,PI 607521,A661,Nitrogen,1
+1202,PI 607521,A661,Nitrogen,1
+1203,Ames 19308,A634,Nitrogen,1
+1204,Ames 19308,A634,Nitrogen,1
+1205,PI 587124,CM105,Nitrogen,1
+1206,PI 587124,CM105,Nitrogen,1
+1207,NSL 81599,A659,Nitrogen,1
+1208,NSL 81599,A659,Nitrogen,1
+1209,Ames 27068,CH9,Nitrogen,1
+1210,Ames 27068,CH9,Nitrogen,1
+1211,PI 550440,B64,Nitrogen,1
+1212,PI 550440,B64,Nitrogen,1
+1213,Ames 23450,A556,Nitrogen,1
+1214,Ames 23450,A556,Nitrogen,1
+1215,NSL 30867,M14,Nitrogen,1
+1216,NSL 30867,M14,Nitrogen,1
+1217,Ames 28364,IA2132,Nitrogen,1
+1218,Ames 28364,IA2132,Nitrogen,1
+1219,PI 587127,H105W,Nitrogen,1
+1220,PI 587127,H105W,Nitrogen,1
+1221,PI 587129,H99,Nitrogen,1
+1222,PI 587129,H99,Nitrogen,1
+1223,Ames 24752,MS1334,Nitrogen,1
+1224,Ames 24752,MS1334,Nitrogen,1
+1225,PI 583352,Mo47,Nitrogen,1
+1226,PI 583352,Mo47,Nitrogen,1
+1227,Ames 27106,CO125,Nitrogen,1
+1228,Ames 27106,CO125,Nitrogen,1
+1229,Ames 27161,NC330,Nitrogen,1
+1230,Ames 27161,NC330,Nitrogen,1
+1231,Ames 27163,NC334,Nitrogen,1
+1232,Ames 27163,NC334,Nitrogen,1
+1233,Ames 28186,P39,Nitrogen,1
+1234,Ames 28186,P39,Nitrogen,1
+1235,Ames 27152,NC312,Nitrogen,1
+1236,Ames 27152,NC312,Nitrogen,1
+1237,Ames 27150,NC308,Nitrogen,1
+1238,Ames 27150,NC308,Nitrogen,1
+1239,PI 587145,NC268,Nitrogen,1
+1240,PI 587145,NC268,Nitrogen,1
+1241,PI 550490,ND246,Nitrogen,1
+1242,PI 550490,ND246,Nitrogen,1
+1243,Ames 27097,CML323,Nitrogen,1
+1244,Ames 27097,CML323,Nitrogen,1
+1245,Ames 26138,CI187-2,Nitrogen,1
+1246,Ames 26138,CI187-2,Nitrogen,1
+1247,Ames 22440,CI90C,Nitrogen,1
+1248,Ames 22440,CI90C,Nitrogen,1
+1249,PI 594048,B105,Nitrogen,1
+1250,PI 594048,B105,Nitrogen,1
+1251,Ames 22754,K55,Nitrogen,1
+1252,Ames 22754,K55,Nitrogen,1
+1253,PI 550472,B57,Nitrogen,1
+1254,PI 550472,B57,Nitrogen,1
+1255,PI 587128,H84,Nitrogen,1
+1256,PI 587128,H84,Nitrogen,1
+1257,PI 543916,Mp339,Nitrogen,1
+1258,PI 543916,Mp339,Nitrogen,1
+1259,Ames 12732,NC232,Nitrogen,1
+1260,Ames 12732,NC232,Nitrogen,1
+1261,Ames 27124,Ki11,Nitrogen,1
+1262,Ames 27124,Ki11,Nitrogen,1
+1263,PI 583351,Mo46,Nitrogen,1
+1264,PI 583351,Mo46,Nitrogen,1
+1265,Ames 27174,NC356,Nitrogen,1
+1266,Ames 27174,NC356,Nitrogen,1
+1267,Ames 27138,N28Ht,Nitrogen,1
+1268,Ames 27138,N28Ht,Nitrogen,1
+1269,PI 550555,NC250,Nitrogen,1
+1270,PI 550555,NC250,Nitrogen,1
+1271,PI 587150,Va35,Nitrogen,1
+1272,PI 587150,Va35,Nitrogen,1
+1273,Ames 27194,W401,Nitrogen,1
+1274,Ames 27194,W401,Nitrogen,1
+1275,PI 686066,SG18,Nitrogen,1
+1276,PI 686066,SG18,Nitrogen,1
+1277,Ames 27190,T234,Nitrogen,1
+1278,Ames 27190,T234,Nitrogen,1
+1279,Ames 19000,VaW6,Nitrogen,1
+1280,Ames 19000,VaW6,Nitrogen,1
+1281,NSL 53094,SC357,Nitrogen,1
+1282,NSL 53094,SC357,Nitrogen,1
+1283,Ames 27182,NC372,Nitrogen,1
+1284,Ames 27182,NC372,Nitrogen,1
+1301,Ames 26604,38-11,Nitrogen,1
+1302,Ames 26604,38-11,Nitrogen,1
+1303,Ames 27085,CML158Q,Nitrogen,1
+1304,Ames 27085,CML158Q,Nitrogen,1
+1305,Ames 27082,CML108,Nitrogen,1
+1306,Ames 27082,CML108,Nitrogen,1
+1307,Check,Check,Nitrogen,1
+1308,Check,Check,Nitrogen,1
+1309,Check,Check,Nitrogen,1
+1310,Check,Check,Nitrogen,1
+1311,Check,Check,Nitrogen,1
+1312,Check,Check,Nitrogen,1
+1313,PI 595542,CML254,Nitrogen,1
+1314,PI 595542,CML254,Nitrogen,1
+1315,Ames 27165,NC338,Nitrogen,1
+1316,Ames 27165,NC338,Nitrogen,1
+1317,Ames 27169,NC346,Nitrogen,1
+1318,Ames 27169,NC346,Nitrogen,1
+1319,Ames 27170,NC348,Nitrogen,1
+1320,Ames 27170,NC348,Nitrogen,1
+1321,Ames 27110,E2558W,Nitrogen,1
+1322,Ames 27110,E2558W,Nitrogen,1
+1323,Check,Check,Nitrogen,1
+1324,Check,Check,Nitrogen,1
+1325,Ames 27156,NC320,Nitrogen,1
+1326,Ames 27156,NC320,Nitrogen,1
+1327,PI 550558,DE811,Nitrogen,1
+1328,PI 550558,DE811,Nitrogen,1
+1329,Ames 27129,KUI2021,Nitrogen,1
+1330,Ames 27129,KUI2021,Nitrogen,1
+1331,Check,Check,Nitrogen,1
+1332,Check,Check,Nitrogen,1
+1333,PI 506255,Tzi25,Nitrogen,1
+1334,PI 506255,Tzi25,Nitrogen,1
+1335,Check,Check,Nitrogen,1
+1336,Check,Check,Nitrogen,1
+1337,PI 506246,Tzi8,Nitrogen,1
+1338,PI 506246,Tzi8,Nitrogen,1
+1339,Ames 26808,Ill.Hy,Nitrogen,1
+1340,Ames 26808,Ill.Hy,Nitrogen,1
+1341,PI 587147,Pa91,Nitrogen,1
+1342,PI 587147,Pa91,Nitrogen,1
+1343,PI 587142,A679,Nitrogen,1
+1344,PI 587142,A679,Nitrogen,1
+1345,PI 550469,B46,Nitrogen,1
+1346,PI 550469,B46,Nitrogen,1
+1347,Ames 27114,H91,Nitrogen,1
+1348,Ames 27114,H91,Nitrogen,1
+1349,PI 550461,B14A,Nitrogen,1
+1350,PI 550461,B14A,Nitrogen,1
+1351,Ames 23503,A680,Nitrogen,1
+1352,Ames 23503,A680,Nitrogen,1
+1353,PI 550473,B73,Nitrogen,1
+1354,PI 550473,B73,Nitrogen,1
+1355,NSL 30904,4226,Nitrogen,1
+1356,NSL 30904,4226,Nitrogen,1
+1357,Check,Check,Nitrogen,1
+1358,Check,Check,Nitrogen,1
+1359,Ames 27143,NC294,Nitrogen,1
+1360,Ames 27143,NC294,Nitrogen,1
+1361,Ames 27140,NC260,Nitrogen,1
+1362,Ames 27140,NC260,Nitrogen,1
+1363,Ames 27177,NC362,Nitrogen,1
+1364,Ames 27177,NC362,Nitrogen,1
+1365,PI 517974,Pa880,Nitrogen,1
+1366,PI 517974,Pa880,Nitrogen,1
+1367,NSL 30894,R177,Nitrogen,1
+1368,NSL 30894,R177,Nitrogen,1
+1369,PI 558532,Mo17,Nitrogen,1
+1370,PI 558532,Mo17,Nitrogen,1
+1371,CIze 44,CI44,Nitrogen,1
+1372,CIze 44,CI44,Nitrogen,1
+1373,Check,Check,Nitrogen,1
+1374,Check,Check,Nitrogen,1
+1375,Ames 31536,A214NGoodman-Buckler,Nitrogen,1
+1376,Ames 31536,A214NGoodman-Buckler,Nitrogen,1
+1377,PI 587125,CO109,Nitrogen,1
+1378,PI 587125,CO109,Nitrogen,1
+1379,Ames 31535,38-11Goodman-Buckler,Nitrogen,1
+1380,Ames 31535,38-11Goodman-Buckler,Nitrogen,1
+1381,Ames 28290,C49,Nitrogen,1
+1382,Ames 28290,C49,Nitrogen,1
+1383,PI 550518,T8,Nitrogen,1
+1384,PI 550518,T8,Nitrogen,1
+1401,Ames 27094,CML314,Nitrogen,1
+1402,Ames 27094,CML314,Nitrogen,1
+1403,Check,Check,Nitrogen,1
+1404,Check,Check,Nitrogen,1
+1405,Ames 27086,CML218,Nitrogen,1
+1406,Ames 27086,CML218,Nitrogen,1
+1407,Ames 27081,CML103,Nitrogen,1
+1408,Ames 27081,CML103,Nitrogen,1
+1409,Check,Check,Nitrogen,1
+1410,Check,Check,Nitrogen,1
+1411,Ames 27091,CML261,Nitrogen,1
+1412,Ames 27091,CML261,Nitrogen,1
+1413,PI 587130,4722,Nitrogen,1
+1414,PI 587130,4722,Nitrogen,1
+1415,Ames 27134,M162W,Nitrogen,1
+1416,Ames 27134,M162W,Nitrogen,1
+1417,Ames 27133,M37W,Nitrogen,1
+1418,Ames 27133,M37W,Nitrogen,1
+1419,Ames 27155,NC318,Nitrogen,1
+1420,Ames 27155,NC318,Nitrogen,1
+1421,Ames 10248,GA209,Nitrogen,1
+1422,Ames 10248,GA209,Nitrogen,1
+1423,Ames 28184,CML69,Nitrogen,1
+1424,Ames 28184,CML69,Nitrogen,1
+1425,PI 531084,NC258,Nitrogen,1
+1426,PI 531084,NC258,Nitrogen,1
+1427,NSL 22893,F44,Nitrogen,1
+1428,NSL 22893,F44,Nitrogen,1
+1429,Ames 27189,SC55,Nitrogen,1
+1430,Ames 27189,SC55,Nitrogen,1
+1431,PI 257506,F2,Nitrogen,1
+1432,PI 257506,F2,Nitrogen,1
+1433,Ames 27119,Il101T,Nitrogen,1
+1434,Ames 27119,Il101T,Nitrogen,1
+1435,PI 606330,DE2,Nitrogen,1
+1436,PI 606330,DE2,Nitrogen,1
+1437,Ames 22763,Tx601,Nitrogen,1
+1438,Ames 22763,Tx601,Nitrogen,1
+1439,Check,Check,Nitrogen,1
+1440,Check,Check,Nitrogen,1
+1441,PI 550522,T232,Nitrogen,1
+1442,PI 550522,T232,Nitrogen,1
+1443,PI 564682,B97,Nitrogen,1
+1444,PI 564682,B97,Nitrogen,1
+1445,Ames 26769,B2,Nitrogen,1
+1446,Ames 26769,B2,Nitrogen,1
+1447,PI 608765,B77,Nitrogen,1
+1448,PI 608765,B77,Nitrogen,1
+1449,Ames 26116,CI3A,Nitrogen,1
+1450,Ames 26116,CI3A,Nitrogen,1
+1451,PI 550467,B37,Nitrogen,1
+1452,PI 550467,B37,Nitrogen,1
+1453,Ames 19314,CI64,Nitrogen,1
+1454,Ames 19314,CI64,Nitrogen,1
+1455,PI 597927,B109,Nitrogen,1
+1456,PI 597927,B109,Nitrogen,1
+1457,Ames 27167,NC342,Nitrogen,1
+1458,Ames 27167,NC342,Nitrogen,1
+1459,NSL 65873,L317,Nitrogen,1
+1460,NSL 65873,L317,Nitrogen,1
+1461,Ames 28939,Mo44,Nitrogen,1
+1462,Ames 28939,Mo44,Nitrogen,1
+1463,PI 583350,Mo45,Nitrogen,1
+1464,PI 583350,Mo45,Nitrogen,1
+1465,Ames 27180,NC368,Nitrogen,1
+1466,Ames 27180,NC368,Nitrogen,1
+1467,NSL 28966,Oh40B,Nitrogen,1
+1468,NSL 28966,Oh40B,Nitrogen,1
+1469,Ames 27151,NC310,Nitrogen,1
+1470,Ames 27151,NC310,Nitrogen,1
+1471,Ames 19293,Wf9,Nitrogen,1
+1472,Ames 19293,Wf9,Nitrogen,1
+1473,PI 587132,Sg1533,Nitrogen,1
+1474,PI 587132,Sg1533,Nitrogen,1
+1475,Ames 26771,33-16,Nitrogen,1
+1476,Ames 26771,33-16,Nitrogen,1
+1477,PI 592734,R229,Nitrogen,1
+1478,PI 592734,R229,Nitrogen,1
+1479,Ames 27196,Yu796_NS,Nitrogen,1
+1480,Ames 27196,Yu796_NS,Nitrogen,1
+1481,Ames 27193,Va85,Nitrogen,1
+1482,Ames 27193,Va85,Nitrogen,1
+1483,Check,Check,Nitrogen,1
+1484,Check,Check,Nitrogen,1
+1501,PI 595550,CML277,Nitrogen,1
+1502,PI 595550,CML277,Nitrogen,1
+1503,PI 406112,A214N,Nitrogen,1
+1504,PI 406112,A214N,Nitrogen,1
+1505,PI 550465,B68,Nitrogen,1
+1506,PI 550465,B68,Nitrogen,1
+1507,Ames 27096,CML322,Nitrogen,1
+1508,Ames 27096,CML322,Nitrogen,1
+1509,Ames 27101,CML333,Nitrogen,1
+1510,Ames 27101,CML333,Nitrogen,1
+1511,Ames 27072,CML10,Nitrogen,1
+1512,Ames 27072,CML10,Nitrogen,1
+1513,PI 595561,CML52,Nitrogen,1
+1514,PI 595561,CML52,Nitrogen,1
+1515,PI 587144,Mo24W,Nitrogen,1
+1516,PI 587144,Mo24W,Nitrogen,1
+1517,Check,Check,Nitrogen,1
+1518,Check,Check,Nitrogen,1
+1519,Ames 12729,NC222,Nitrogen,1
+1520,Ames 12729,NC222,Nitrogen,1
+1521,Ames 27144,NC296,Nitrogen,1
+1522,Ames 27144,NC296,Nitrogen,1
+1523,NSL 30038,K4,Nitrogen,1
+1524,NSL 30038,K4,Nitrogen,1
+1525,Check,Check,Nitrogen,1
+1526,Check,Check,Nitrogen,1
+1527,Ames 27121,K64,Nitrogen,1
+1528,Ames 27121,K64,Nitrogen,1
+1529,PI 506248,Tzi10,Nitrogen,1
+1530,PI 506248,Tzi10,Nitrogen,1
+1531,Ames 27179,NC366,Nitrogen,1
+1532,Ames 27179,NC366,Nitrogen,1
+1533,PI 540745,Tzi11,Nitrogen,1
+1534,PI 540745,Tzi11,Nitrogen,1
+1535,Ames 27131,Ky226,Nitrogen,1
+1536,Ames 27131,Ky226,Nitrogen,1
+1537,PI 558520,Mo1W,Nitrogen,1
+1538,PI 558520,Mo1W,Nitrogen,1
+1539,Ames 22748,H100,Nitrogen,1
+1540,Ames 22748,H100,Nitrogen,1
+1541,PI 506253,Tzi18,Nitrogen,1
+1542,PI 506253,Tzi18,Nitrogen,1
+1543,Ames 27065,B73Htrhm,Nitrogen,1
+1544,Ames 27065,B73Htrhm,Nitrogen,1
+1545,Ames 27069,CH701-30,Nitrogen,1
+1546,Ames 27069,CH701-30,Nitrogen,1
+1547,PI 686059,IDS28,Nitrogen,1
+1548,PI 686059,IDS28,Nitrogen,1
+1549,Check,Check,Nitrogen,1
+1550,Check,Check,Nitrogen,1
+1551,PI 608767,B84,Nitrogen,1
+1552,PI 608767,B84,Nitrogen,1
+1553,PI 587140,A632,Nitrogen,1
+1554,PI 587140,A632,Nitrogen,1
+1555,Ames 27066,B164,Nitrogen,1
+1556,Ames 27066,B164,Nitrogen,1
+1557,Ames 27149,NC306,Nitrogen,1
+1558,Ames 27149,NC306,Nitrogen,1
+1559,NSL 65874,Os420,Nitrogen,1
+1560,NSL 65874,Os420,Nitrogen,1
+1561,Ames 27178,NC364,Nitrogen,1
+1562,Ames 27178,NC364,Nitrogen,1
+1563,Ames 27160,NC328,Nitrogen,1
+1564,Ames 27160,NC328,Nitrogen,1
+1565,Ames 27159,NC326,Nitrogen,1
+1566,Ames 27159,NC326,Nitrogen,1
+1567,Ames 27118,Il14H,Nitrogen,1
+1568,Ames 27118,Il14H,Nitrogen,1
+1569,Ames 27168,NC344,Nitrogen,1
+1570,Ames 27168,NC344,Nitrogen,1
+1571,PI 587149,Va26,Nitrogen,1
+1572,PI 587149,Va26,Nitrogen,1
+1573,Ames 19328,Va22,Nitrogen,1
+1574,Ames 19328,Va22,Nitrogen,1
+1575,Ames 31534,CI90CGoodman-Buckler,Nitrogen,1
+1576,Ames 31534,CI90CGoodman-Buckler,Nitrogen,1
+1577,PI 606768,SD40,Nitrogen,1
+1578,PI 606768,SD40,Nitrogen,1
+1579,Ames 28367,CI7Goodman-Buckler,Nitrogen,1
+1580,Ames 28367,CI7Goodman-Buckler,Nitrogen,1
+1581,Ames 27187,R4,Nitrogen,1
+1582,Ames 27187,R4,Nitrogen,1
+1583,Ames 24989,Va99,Nitrogen,1
+1584,Ames 24989,Va99,Nitrogen,1
+2001,PI 587131,HP301,No Nitrogen,1
+2002,PI 587131,HP301,No Nitrogen,1
+2003,PI 550472,B57,No Nitrogen,1
+2004,PI 550472,B57,No Nitrogen,1
+2005,Ames 19284,C103,No Nitrogen,1
+2006,Ames 19284,C103,No Nitrogen,1
+2007,PI 594047,B104,No Nitrogen,1
+2008,PI 594047,B104,No Nitrogen,1
+2009,Ames 19319,H95,No Nitrogen,1
+2010,Ames 19319,H95,No Nitrogen,1
+2011,Check,Check,No Nitrogen,1
+2012,Check,Check,No Nitrogen,1
+2013,Ames 22754,K55,No Nitrogen,1
+2014,Ames 22754,K55,No Nitrogen,1
+2015,PI 550555,NC250,No Nitrogen,1
+2016,PI 550555,NC250,No Nitrogen,1
+2017,Ames 12732,NC232,No Nitrogen,1
+2018,Ames 12732,NC232,No Nitrogen,1
+2019,Ames 27138,N28Ht,No Nitrogen,1
+2020,Ames 27138,N28Ht,No Nitrogen,1
+2021,Ames 12731,NC230,No Nitrogen,1
+2022,Ames 12731,NC230,No Nitrogen,1
+2023,Ames 27147,NC302,No Nitrogen,1
+2024,Ames 27147,NC302,No Nitrogen,1
+2025,Ames 27261,NC298,No Nitrogen,1
+2026,Ames 27261,NC298,No Nitrogen,1
+2027,Ames 27172,NC352,No Nitrogen,1
+2028,Ames 27172,NC352,No Nitrogen,1
+2029,PI 686066,SG18,No Nitrogen,1
+2030,PI 686066,SG18,No Nitrogen,1
+2031,PI 573098,Oh603,No Nitrogen,1
+2032,PI 573098,Oh603,No Nitrogen,1
+2033,Ames 27182,NC372,No Nitrogen,1
+2034,Ames 27182,NC372,No Nitrogen,1
+2035,Ames 27194,W401,No Nitrogen,1
+2036,Ames 27194,W401,No Nitrogen,1
+2037,Check,Check,No Nitrogen,1
+2038,Check,Check,No Nitrogen,1
+2039,PI 686065,SA24,No Nitrogen,1
+2040,PI 686065,SA24,No Nitrogen,1
+2041,Ames 27185,Pa875,No Nitrogen,1
+2042,Ames 27185,Pa875,No Nitrogen,1
+2043,PI 587138,A554,No Nitrogen,1
+2044,PI 587138,A554,No Nitrogen,1
+2045,NSL 81599,A659,No Nitrogen,1
+2046,NSL 81599,A659,No Nitrogen,1
+2047,Ames 23405,A239,No Nitrogen,1
+2048,Ames 23405,A239,No Nitrogen,1
+2049,Ames 23450,A556,No Nitrogen,1
+2050,Ames 23450,A556,No Nitrogen,1
+2051,Ames 27067,C49A,No Nitrogen,1
+2052,Ames 27067,C49A,No Nitrogen,1
+2053,Ames 19311,A641,No Nitrogen,1
+2054,Ames 19311,A641,No Nitrogen,1
+2055,Ames 19316,CM174,No Nitrogen,1
+2056,Ames 19316,CM174,No Nitrogen,1
+2057,PI 257507,F7,No Nitrogen,1
+2058,PI 257507,F7,No Nitrogen,1
+2059,PI 686057,I29,No Nitrogen,1
+2060,PI 686057,I29,No Nitrogen,1
+2061,Ames 27106,CO125,No Nitrogen,1
+2062,Ames 27106,CO125,No Nitrogen,1
+2063,Ames 27070,CM7,No Nitrogen,1
+2064,Ames 27070,CM7,No Nitrogen,1
+2065,Ames 24734,MS153,No Nitrogen,1
+2066,Ames 24734,MS153,No Nitrogen,1
+2067,Ames 27104,CMV3,No Nitrogen,1
+2068,Ames 27104,CMV3,No Nitrogen,1
+2069,Ames 27105,CO106,No Nitrogen,1
+2070,Ames 27105,CO106,No Nitrogen,1
+2071,Ames 27162,NC332,No Nitrogen,1
+2072,Ames 27162,NC332,No Nitrogen,1
+2073,PI 550490,ND246,No Nitrogen,1
+2074,PI 550490,ND246,No Nitrogen,1
+2075,Ames 19288,Oh43,No Nitrogen,1
+2076,Ames 19288,Oh43,No Nitrogen,1
+2077,Ames 27154,NC316,No Nitrogen,1
+2078,Ames 27154,NC316,No Nitrogen,1
+2079,PI 524969,SD44,No Nitrogen,1
+2080,PI 524969,SD44,No Nitrogen,1
+2081,Ames 19016,Va59,No Nitrogen,1
+2082,Ames 19016,Va59,No Nitrogen,1
+2083,Ames 28186,P39,No Nitrogen,1
+2084,Ames 28186,P39,No Nitrogen,1
+2101,Ames 19309,A635,No Nitrogen,1
+2102,Ames 19309,A635,No Nitrogen,1
+2103,Ames 21512,CI31A,No Nitrogen,1
+2104,Ames 21512,CI31A,No Nitrogen,1
+2105,Check,Check,No Nitrogen,1
+2106,Check,Check,No Nitrogen,1
+2107,PI 594048,B105,No Nitrogen,1
+2108,PI 594048,B105,No Nitrogen,1
+2109,Ames 26138,CI187-2,No Nitrogen,1
+2110,Ames 26138,CI187-2,No Nitrogen,1
+2111,Ames 27087,CML220,No Nitrogen,1
+2112,Ames 27087,CML220,No Nitrogen,1
+2113,Ames 27097,CML323,No Nitrogen,1
+2114,Ames 27097,CML323,No Nitrogen,1
+2115,Ames 27141,NC290A,No Nitrogen,1
+2116,Ames 27141,NC290A,No Nitrogen,1
+2117,Ames 27137,N6,No Nitrogen,1
+2118,Ames 27137,N6,No Nitrogen,1
+2119,Check,Check,No Nitrogen,1
+2120,Check,Check,No Nitrogen,1
+2121,Ames 27174,NC356,No Nitrogen,1
+2122,Ames 27174,NC356,No Nitrogen,1
+2123,PI 520774,NC264,No Nitrogen,1
+2124,PI 520774,NC264,No Nitrogen,1
+2125,Ames 27158,NC324,No Nitrogen,1
+2126,Ames 27158,NC324,No Nitrogen,1
+2127,Ames 28366,N7A,No Nitrogen,1
+2128,Ames 28366,N7A,No Nitrogen,1
+2129,Ames 27190,T234,No Nitrogen,1
+2130,Ames 27190,T234,No Nitrogen,1
+2131,Ames 27181,NC370,No Nitrogen,1
+2132,Ames 27181,NC370,No Nitrogen,1
+2133,Ames 19000,VaW6,No Nitrogen,1
+2134,Ames 19000,VaW6,No Nitrogen,1
+2135,PI 587151,Va102,No Nitrogen,1
+2136,PI 587151,Va102,No Nitrogen,1
+2137,NSL 53094,SC357,No Nitrogen,1
+2138,NSL 53094,SC357,No Nitrogen,1
+2139,Ames 27176,NC360,No Nitrogen,1
+2140,Ames 27176,NC360,No Nitrogen,1
+2141,PI 587152,W64A,No Nitrogen,1
+2142,PI 587152,W64A,No Nitrogen,1
+2143,Ames 22443,A188,No Nitrogen,1
+2144,Ames 22443,A188,No Nitrogen,1
+2145,Ames 19313,C123,No Nitrogen,1
+2146,Ames 19313,C123,No Nitrogen,1
+2147,PI 608774,B75,No Nitrogen,1
+2148,PI 608774,B75,No Nitrogen,1
+2149,PI 607521,A661,No Nitrogen,1
+2150,PI 607521,A661,No Nitrogen,1
+2151,PI 587139,A619,No Nitrogen,1
+2152,PI 587139,A619,No Nitrogen,1
+2153,PI 594046,B103,No Nitrogen,1
+2154,PI 594046,B103,No Nitrogen,1
+2155,Ames 27068,CH9,No Nitrogen,1
+2156,Ames 27068,CH9,No Nitrogen,1
+2157,Check,Check,No Nitrogen,1
+2158,Check,Check,No Nitrogen,1
+2159,Ames 20140,Mt42,No Nitrogen,1
+2160,Ames 20140,Mt42,No Nitrogen,1
+2161,PI 587129,H99,No Nitrogen,1
+2162,PI 587129,H99,No Nitrogen,1
+2163,Ames 27135,MEF156-55-2,No Nitrogen,1
+2164,Ames 27135,MEF156-55-2,No Nitrogen,1
+2165,Ames 20190,CM37,No Nitrogen,1
+2166,Ames 20190,CM37,No Nitrogen,1
+2167,PI 583352,Mo47,No Nitrogen,1
+2168,PI 583352,Mo47,No Nitrogen,1
+2169,PI 587135,Ia5125,No Nitrogen,1
+2170,PI 587135,Ia5125,No Nitrogen,1
+2171,PI 531085,NC262,No Nitrogen,1
+2172,PI 531085,NC262,No Nitrogen,1
+2173,Check,Check,No Nitrogen,1
+2174,Check,Check,No Nitrogen,1
+2175,Ames 27161,NC330,No Nitrogen,1
+2176,Ames 27161,NC330,No Nitrogen,1
+2177,PI 587137,Ms71,No Nitrogen,1
+2178,PI 587137,Ms71,No Nitrogen,1
+2179,Ames 27163,NC334,No Nitrogen,1
+2180,Ames 27163,NC334,No Nitrogen,1
+2181,PI 587145,NC268,No Nitrogen,1
+2182,PI 587145,NC268,No Nitrogen,1
+2183,PI 550566,N192,No Nitrogen,1
+2184,PI 550566,N192,No Nitrogen,1
+2201,Ames 22440,CI90C,No Nitrogen,1
+2202,Ames 22440,CI90C,No Nitrogen,1
+2203,PI 587128,H84,No Nitrogen,1
+2204,PI 587128,H84,No Nitrogen,1
+2205,PI 608766,B79,No Nitrogen,1
+2206,PI 608766,B79,No Nitrogen,1
+2207,Ames 27112,F2834T,No Nitrogen,1
+2208,Ames 27112,F2834T,No Nitrogen,1
+2209,Ames 27083,CML154Q,No Nitrogen,1
+2210,Ames 27083,CML154Q,No Nitrogen,1
+2211,Ames 27120,Il677a,No Nitrogen,1
+2212,Ames 27120,Il677a,No Nitrogen,1
+2213,PI 606329,DE1,No Nitrogen,1
+2214,PI 606329,DE1,No Nitrogen,1
+2215,Ames 27124,Ki11,No Nitrogen,1
+2216,Ames 27124,Ki11,No Nitrogen,1
+2217,PI 543916,Mp339,No Nitrogen,1
+2218,PI 543916,Mp339,No Nitrogen,1
+2219,PI 583351,Mo46,No Nitrogen,1
+2220,PI 583351,Mo46,No Nitrogen,1
+2221,Ames 27260,Ki44,No Nitrogen,1
+2222,Ames 27260,Ki44,No Nitrogen,1
+2223,Check,Check,No Nitrogen,1
+2224,Check,Check,No Nitrogen,1
+2225,Ames 27175,NC358,No Nitrogen,1
+2226,Ames 27175,NC358,No Nitrogen,1
+2227,Ames 27164,NC336,No Nitrogen,1
+2228,Ames 27164,NC336,No Nitrogen,1
+2229,Ames 27183,Oh43E,No Nitrogen,1
+2230,Ames 27183,Oh43E,No Nitrogen,1
+2231,NSL 30053,W22,No Nitrogen,1
+2232,NSL 30053,W22,No Nitrogen,1
+2233,Ames 8399,W117HT,No Nitrogen,1
+2234,Ames 8399,W117HT,No Nitrogen,1
+2235,Check,Check,No Nitrogen,1
+2236,Check,Check,No Nitrogen,1
+2237,PI 587150,Va35,No Nitrogen,1
+2238,PI 587150,Va35,No Nitrogen,1
+2239,Ames 19323,Oh7B,No Nitrogen,1
+2240,Ames 19323,Oh7B,No Nitrogen,1
+2241,Ames 27184,Pa762,No Nitrogen,1
+2242,Ames 27184,Pa762,No Nitrogen,1
+2243,PI 550440,B64,No Nitrogen,1
+2244,PI 550440,B64,No Nitrogen,1
+2245,Ames 19308,A634,No Nitrogen,1
+2246,Ames 19308,A634,No Nitrogen,1
+2247,PI 587141,A654,No Nitrogen,1
+2248,PI 587141,A654,No Nitrogen,1
+2249,Check,Check,No Nitrogen,1
+2250,Check,Check,No Nitrogen,1
+2251,PI 550483,B76,No Nitrogen,1
+2252,PI 550483,B76,No Nitrogen,1
+2253,PI 587143,A682,No Nitrogen,1
+2254,PI 587143,A682,No Nitrogen,1
+2255,PI 587124,CM105,No Nitrogen,1
+2256,PI 587124,CM105,No Nitrogen,1
+2257,Ames 24752,MS1334,No Nitrogen,1
+2258,Ames 24752,MS1334,No Nitrogen,1
+2259,Ames 28364,IA2132,No Nitrogen,1
+2260,Ames 28364,IA2132,No Nitrogen,1
+2261,NSL 30867,M14,No Nitrogen,1
+2262,NSL 30867,M14,No Nitrogen,1
+2263,Ames 27111,EP1,No Nitrogen,1
+2264,Ames 27111,EP1,No Nitrogen,1
+2265,PI 686063,IDS91,No Nitrogen,1
+2266,PI 686063,IDS91,No Nitrogen,1
+2267,Ames 27107,CO255,No Nitrogen,1
+2268,Ames 27107,CO255,No Nitrogen,1
+2269,PI 587127,H105W,No Nitrogen,1
+2270,PI 587127,H105W,No Nitrogen,1
+2271,Ames 27150,NC308,No Nitrogen,1
+2272,Ames 27150,NC308,No Nitrogen,1
+2273,Ames 27142,NC292,No Nitrogen,1
+2274,Ames 27142,NC292,No Nitrogen,1
+2275,Ames 27152,NC312,No Nitrogen,1
+2276,Ames 27152,NC312,No Nitrogen,1
+2277,PI 587154,W153R,No Nitrogen,1
+2278,PI 587154,W153R,No Nitrogen,1
+2279,Ames 19326,R168,No Nitrogen,1
+2280,Ames 19326,R168,No Nitrogen,1
+2281,Check,Check,No Nitrogen,1
+2282,Check,Check,No Nitrogen,1
+2283,Ames 19330,W182B,No Nitrogen,1
+2284,Ames 19330,W182B,No Nitrogen,1
+2301,PI 550469,B46,No Nitrogen,1
+2302,PI 550469,B46,No Nitrogen,1
+2303,PI 686059,IDS28,No Nitrogen,1
+2304,PI 686059,IDS28,No Nitrogen,1
+2305,PI 550467,B37,No Nitrogen,1
+2306,PI 550467,B37,No Nitrogen,1
+2307,Check,Check,No Nitrogen,1
+2308,Check,Check,No Nitrogen,1
+2309,Ames 27066,B164,No Nitrogen,1
+2310,Ames 27066,B164,No Nitrogen,1
+2311,Check,Check,No Nitrogen,1
+2312,Check,Check,No Nitrogen,1
+2313,PI 550461,B14A,No Nitrogen,1
+2314,PI 550461,B14A,No Nitrogen,1
+2315,Ames 27140,NC260,No Nitrogen,1
+2316,Ames 27140,NC260,No Nitrogen,1
+2317,NSL 30894,R177,No Nitrogen,1
+2318,NSL 30894,R177,No Nitrogen,1
+2319,Ames 27151,NC310,No Nitrogen,1
+2320,Ames 27151,NC310,No Nitrogen,1
+2321,Ames 27178,NC364,No Nitrogen,1
+2322,Ames 27178,NC364,No Nitrogen,1
+2323,NSL 65873,L317,No Nitrogen,1
+2324,NSL 65873,L317,No Nitrogen,1
+2325,NSL 28966,Oh40B,No Nitrogen,1
+2326,NSL 28966,Oh40B,No Nitrogen,1
+2327,Ames 27168,NC344,No Nitrogen,1
+2328,Ames 27168,NC344,No Nitrogen,1
+2329,Ames 19328,Va22,No Nitrogen,1
+2330,Ames 19328,Va22,No Nitrogen,1
+2331,CIze 44,CI44,No Nitrogen,1
+2332,CIze 44,CI44,No Nitrogen,1
+2333,Ames 28290,C49,No Nitrogen,1
+2334,Ames 28290,C49,No Nitrogen,1
+2335,Ames 28367,CI7Goodman-Buckler,No Nitrogen,1
+2336,Ames 28367,CI7Goodman-Buckler,No Nitrogen,1
+2337,Ames 27193,Va85,No Nitrogen,1
+2338,Ames 27193,Va85,No Nitrogen,1
+2339,PI 587149,Va26,No Nitrogen,1
+2340,PI 587149,Va26,No Nitrogen,1
+2341,Ames 26771,33-16,No Nitrogen,1
+2342,Ames 26771,33-16,No Nitrogen,1
+2343,PI 595565,CML287,No Nitrogen,1
+2344,PI 595565,CML287,No Nitrogen,1
+2345,Check,Check,No Nitrogen,1
+2346,Check,Check,No Nitrogen,1
+2347,Ames 27082,CML108,No Nitrogen,1
+2348,Ames 27082,CML108,No Nitrogen,1
+2349,Ames 27091,CML261,No Nitrogen,1
+2350,Ames 27091,CML261,No Nitrogen,1
+2351,Check,Check,No Nitrogen,1
+2352,Check,Check,No Nitrogen,1
+2353,Ames 27081,CML103,No Nitrogen,1
+2354,Ames 27081,CML103,No Nitrogen,1
+2355,Ames 27101,CML333,No Nitrogen,1
+2356,Ames 27101,CML333,No Nitrogen,1
+2357,Ames 27156,NC320,No Nitrogen,1
+2358,Ames 27156,NC320,No Nitrogen,1
+2359,Ames 27165,NC338,No Nitrogen,1
+2360,Ames 27165,NC338,No Nitrogen,1
+2361,NSL 30038,K4,No Nitrogen,1
+2362,NSL 30038,K4,No Nitrogen,1
+2363,PI 550558,DE811,No Nitrogen,1
+2364,PI 550558,DE811,No Nitrogen,1
+2365,Ames 27144,NC296,No Nitrogen,1
+2366,Ames 27144,NC296,No Nitrogen,1
+2367,Ames 27110,E2558W,No Nitrogen,1
+2368,Ames 27110,E2558W,No Nitrogen,1
+2369,Check,Check,No Nitrogen,1
+2370,Check,Check,No Nitrogen,1
+2371,PI 506253,Tzi18,No Nitrogen,1
+2372,PI 506253,Tzi18,No Nitrogen,1
+2373,Ames 27131,Ky226,No Nitrogen,1
+2374,Ames 27131,Ky226,No Nitrogen,1
+2375,Ames 22748,H100,No Nitrogen,1
+2376,Ames 22748,H100,No Nitrogen,1
+2377,PI 540745,Tzi11,No Nitrogen,1
+2378,PI 540745,Tzi11,No Nitrogen,1
+2379,PI 506255,Tzi25,No Nitrogen,1
+2380,PI 506255,Tzi25,No Nitrogen,1
+2381,Check,Check,No Nitrogen,1
+2382,Check,Check,No Nitrogen,1
+2383,Ames 27179,NC366,No Nitrogen,1
+2384,Ames 27179,NC366,No Nitrogen,1
+2401,Ames 27114,H91,No Nitrogen,1
+2402,Ames 27114,H91,No Nitrogen,1
+2403,NSL 30904,4226,No Nitrogen,1
+2404,NSL 30904,4226,No Nitrogen,1
+2405,PI 550473,B73,No Nitrogen,1
+2406,PI 550473,B73,No Nitrogen,1
+2407,PI 608765,B77,No Nitrogen,1
+2408,PI 608765,B77,No Nitrogen,1
+2409,PI 587140,A632,No Nitrogen,1
+2410,PI 587140,A632,No Nitrogen,1
+2411,Ames 26769,B2,No Nitrogen,1
+2412,Ames 26769,B2,No Nitrogen,1
+2413,Ames 27069,CH701-30,No Nitrogen,1
+2414,Ames 27069,CH701-30,No Nitrogen,1
+2415,NSL 65874,Os420,No Nitrogen,1
+2416,NSL 65874,Os420,No Nitrogen,1
+2417,PI 517974,Pa880,No Nitrogen,1
+2418,PI 517974,Pa880,No Nitrogen,1
+2419,Ames 28939,Mo44,No Nitrogen,1
+2420,Ames 28939,Mo44,No Nitrogen,1
+2421,Ames 27159,NC326,No Nitrogen,1
+2422,Ames 27159,NC326,No Nitrogen,1
+2423,Ames 27143,NC294,No Nitrogen,1
+2424,Ames 27143,NC294,No Nitrogen,1
+2425,Ames 27160,NC328,No Nitrogen,1
+2426,Ames 27160,NC328,No Nitrogen,1
+2427,Ames 27118,Il14H,No Nitrogen,1
+2428,Ames 27118,Il14H,No Nitrogen,1
+2429,Ames 19293,Wf9,No Nitrogen,1
+2430,Ames 19293,Wf9,No Nitrogen,1
+2431,Ames 31536,A214NGoodman-Buckler,No Nitrogen,1
+2432,Ames 31536,A214NGoodman-Buckler,No Nitrogen,1
+2433,Ames 27196,Yu796_NS,No Nitrogen,1
+2434,Ames 27196,Yu796_NS,No Nitrogen,1
+2435,Ames 31535,38-11Goodman-Buckler,No Nitrogen,1
+2436,Ames 31535,38-11Goodman-Buckler,No Nitrogen,1
+2437,PI 550518,T8,No Nitrogen,1
+2438,PI 550518,T8,No Nitrogen,1
+2439,PI 606768,SD40,No Nitrogen,1
+2440,PI 606768,SD40,No Nitrogen,1
+2441,Ames 24989,Va99,No Nitrogen,1
+2442,Ames 24989,Va99,No Nitrogen,1
+2443,Check,Check,No Nitrogen,1
+2444,Check,Check,No Nitrogen,1
+2445,Check,Check,No Nitrogen,1
+2446,Check,Check,No Nitrogen,1
+2447,Check,Check,No Nitrogen,1
+2448,Check,Check,No Nitrogen,1
+2449,Ames 27086,CML218,No Nitrogen,1
+2450,Ames 27086,CML218,No Nitrogen,1
+2451,PI 595561,CML52,No Nitrogen,1
+2452,PI 595561,CML52,No Nitrogen,1
+2453,PI 595542,CML254,No Nitrogen,1
+2454,PI 595542,CML254,No Nitrogen,1
+2455,Ames 26604,38-11,No Nitrogen,1
+2456,Ames 26604,38-11,No Nitrogen,1
+2457,Ames 27134,M162W,No Nitrogen,1
+2458,Ames 27134,M162W,No Nitrogen,1
+2459,Ames 10248,GA209,No Nitrogen,1
+2460,Ames 10248,GA209,No Nitrogen,1
+2461,Ames 27155,NC318,No Nitrogen,1
+2462,Ames 27155,NC318,No Nitrogen,1
+2463,Ames 28184,CML69,No Nitrogen,1
+2464,Ames 28184,CML69,No Nitrogen,1
+2465,PI 587144,Mo24W,No Nitrogen,1
+2466,PI 587144,Mo24W,No Nitrogen,1
+2467,Check,Check,No Nitrogen,1
+2468,Check,Check,No Nitrogen,1
+2469,Ames 27121,K64,No Nitrogen,1
+2470,Ames 27121,K64,No Nitrogen,1
+2471,PI 550522,T232,No Nitrogen,1
+2472,PI 550522,T232,No Nitrogen,1
+2473,Ames 27189,SC55,No Nitrogen,1
+2474,Ames 27189,SC55,No Nitrogen,1
+2475,Ames 22763,Tx601,No Nitrogen,1
+2476,Ames 22763,Tx601,No Nitrogen,1
+2477,PI 257506,F2,No Nitrogen,1
+2478,PI 257506,F2,No Nitrogen,1
+2479,PI 606330,DE2,No Nitrogen,1
+2480,PI 606330,DE2,No Nitrogen,1
+2481,Ames 26808,Ill.Hy,No Nitrogen,1
+2482,Ames 26808,Ill.Hy,No Nitrogen,1
+2483,Check,Check,No Nitrogen,1
+2484,Check,Check,No Nitrogen,1
+2501,Ames 19314,CI64,No Nitrogen,1
+2502,Ames 19314,CI64,No Nitrogen,1
+2503,Ames 27065,B73Htrhm,No Nitrogen,1
+2504,Ames 27065,B73Htrhm,No Nitrogen,1
+2505,PI 608767,B84,No Nitrogen,1
+2506,PI 608767,B84,No Nitrogen,1
+2507,PI 564682,B97,No Nitrogen,1
+2508,PI 564682,B97,No Nitrogen,1
+2509,PI 597927,B109,No Nitrogen,1
+2510,PI 597927,B109,No Nitrogen,1
+2511,Ames 23503,A680,No Nitrogen,1
+2512,Ames 23503,A680,No Nitrogen,1
+2513,PI 587142,A679,No Nitrogen,1
+2514,PI 587142,A679,No Nitrogen,1
+2515,PI 558532,Mo17,No Nitrogen,1
+2516,PI 558532,Mo17,No Nitrogen,1
+2517,Ames 27149,NC306,No Nitrogen,1
+2518,Ames 27149,NC306,No Nitrogen,1
+2519,Ames 27180,NC368,No Nitrogen,1
+2520,Ames 27180,NC368,No Nitrogen,1
+2521,Check,Check,No Nitrogen,1
+2522,Check,Check,No Nitrogen,1
+2523,Ames 27167,NC342,No Nitrogen,1
+2524,Ames 27167,NC342,No Nitrogen,1
+2525,PI 583350,Mo45,No Nitrogen,1
+2526,PI 583350,Mo45,No Nitrogen,1
+2527,Ames 27177,NC362,No Nitrogen,1
+2528,Ames 27177,NC362,No Nitrogen,1
+2529,Ames 31534,CI90CGoodman-Buckler,No Nitrogen,1
+2530,Ames 31534,CI90CGoodman-Buckler,No Nitrogen,1
+2531,Check,Check,No Nitrogen,1
+2532,Check,Check,No Nitrogen,1
+2533,PI 592734,R229,No Nitrogen,1
+2534,PI 592734,R229,No Nitrogen,1
+2535,PI 587132,Sg1533,No Nitrogen,1
+2536,PI 587132,Sg1533,No Nitrogen,1
+2537,Check,Check,No Nitrogen,1
+2538,Check,Check,No Nitrogen,1
+2539,PI 587125,CO109,No Nitrogen,1
+2540,PI 587125,CO109,No Nitrogen,1
+2541,Ames 27187,R4,No Nitrogen,1
+2542,Ames 27187,R4,No Nitrogen,1
+2543,Check,Check,No Nitrogen,1
+2544,Check,Check,No Nitrogen,1
+2545,Ames 27096,CML322,No Nitrogen,1
+2546,Ames 27096,CML322,No Nitrogen,1
+2547,PI 550465,B68,No Nitrogen,1
+2548,PI 550465,B68,No Nitrogen,1
+2549,PI 406112,A214N,No Nitrogen,1
+2550,PI 406112,A214N,No Nitrogen,1
+2551,PI 587130,4722,No Nitrogen,1
+2552,PI 587130,4722,No Nitrogen,1
+2553,Ames 27095,CML321,No Nitrogen,1
+2554,Ames 27095,CML321,No Nitrogen,1
+2555,Check,Check,No Nitrogen,1
+2556,Check,Check,No Nitrogen,1
+2557,PI 531084,NC258,No Nitrogen,1
+2558,PI 531084,NC258,No Nitrogen,1
+2559,NSL 22893,F44,No Nitrogen,1
+2560,NSL 22893,F44,No Nitrogen,1
+2561,Ames 12729,NC222,No Nitrogen,1
+2562,Ames 12729,NC222,No Nitrogen,1
+2563,Ames 27133,M37W,No Nitrogen,1
+2564,Ames 27133,M37W,No Nitrogen,1
+2565,Check,Check,No Nitrogen,1
+2566,Check,Check,No Nitrogen,1
+2567,Ames 27170,NC348,No Nitrogen,1
+2568,Ames 27170,NC348,No Nitrogen,1
+2569,Ames 27169,NC346,No Nitrogen,1
+2570,Ames 27169,NC346,No Nitrogen,1
+2571,Check,Check,No Nitrogen,1
+2572,Check,Check,No Nitrogen,1
+2573,Check,Check,No Nitrogen,1
+2574,Check,Check,No Nitrogen,1
+2575,PI 558520,Mo1W,No Nitrogen,1
+2576,PI 558520,Mo1W,No Nitrogen,1
+2577,Check,Check,No Nitrogen,1
+2578,Check,Check,No Nitrogen,1
+2579,Ames 27129,KUI2021,No Nitrogen,1
+2580,Ames 27129,KUI2021,No Nitrogen,1
+2581,Ames 27119,Il101T,No Nitrogen,1
+2582,Ames 27119,Il101T,No Nitrogen,1
+2583,PI 587147,Pa91,No Nitrogen,1
+2584,PI 587147,Pa91,No Nitrogen,1
+3001,PI 406112,A214N,No Nitrogen,2
+3002,PI 406112,A214N,No Nitrogen,2
+3003,NSL 65865,B10,No Nitrogen,2
+3004,NSL 65865,B10,No Nitrogen,2
+3005,Ames 27081,CML103,No Nitrogen,2
+3006,Ames 27081,CML103,No Nitrogen,2
+3007,PI 595550,CML277,No Nitrogen,2
+3008,PI 595550,CML277,No Nitrogen,2
+3009,Check,Check,No Nitrogen,2
+3010,Check,Check,No Nitrogen,2
+3011,Ames 26604,38-11,No Nitrogen,2
+3012,Ames 26604,38-11,No Nitrogen,2
+3013,Check,Check,No Nitrogen,2
+3014,Check,Check,No Nitrogen,2
+3015,Check,Check,No Nitrogen,2
+3016,Check,Check,No Nitrogen,2
+3017,Ames 27156,NC320,No Nitrogen,2
+3018,Ames 27156,NC320,No Nitrogen,2
+3019,Check,Check,No Nitrogen,2
+3020,Check,Check,No Nitrogen,2
+3021,NSL 22893,F44,No Nitrogen,2
+3022,NSL 22893,F44,No Nitrogen,2
+3023,Ames 27134,M162W,No Nitrogen,2
+3024,Ames 27134,M162W,No Nitrogen,2
+3025,Ames 28184,CML69,No Nitrogen,2
+3026,Ames 28184,CML69,No Nitrogen,2
+3027,PI 550558,DE811,No Nitrogen,2
+3028,PI 550558,DE811,No Nitrogen,2
+3029,Ames 22748,H100,No Nitrogen,2
+3030,Ames 22748,H100,No Nitrogen,2
+3031,PI 558520,Mo1W,No Nitrogen,2
+3032,PI 558520,Mo1W,No Nitrogen,2
+3033,PI 506253,Tzi18,No Nitrogen,2
+3034,PI 506253,Tzi18,No Nitrogen,2
+3035,PI 506246,Tzi8,No Nitrogen,2
+3036,PI 506246,Tzi8,No Nitrogen,2
+3037,Check,Check,No Nitrogen,2
+3038,Check,Check,No Nitrogen,2
+3039,Ames 26808,Ill.Hy,No Nitrogen,2
+3040,Ames 26808,Ill.Hy,No Nitrogen,2
+3041,PI 257506,F2,No Nitrogen,2
+3042,PI 257506,F2,No Nitrogen,2
+3043,Ames 22443,A188,No Nitrogen,2
+3044,Ames 22443,A188,No Nitrogen,2
+3045,Ames 27068,CH9,No Nitrogen,2
+3046,Ames 27068,CH9,No Nitrogen,2
+3047,PI 587143,A682,No Nitrogen,2
+3048,PI 587143,A682,No Nitrogen,2
+3049,Check,Check,No Nitrogen,2
+3050,Check,Check,No Nitrogen,2
+3051,Ames 19311,A641,No Nitrogen,2
+3052,Ames 19311,A641,No Nitrogen,2
+3053,Ames 23450,A556,No Nitrogen,2
+3054,Ames 23450,A556,No Nitrogen,2
+3055,PI 587124,CM105,No Nitrogen,2
+3056,PI 587124,CM105,No Nitrogen,2
+3057,Ames 27135,MEF156-55-2,No Nitrogen,2
+3058,Ames 27135,MEF156-55-2,No Nitrogen,2
+3059,Ames 20140,Mt42,No Nitrogen,2
+3060,Ames 20140,Mt42,No Nitrogen,2
+3061,PI 583352,Mo47,No Nitrogen,2
+3062,PI 583352,Mo47,No Nitrogen,2
+3063,Check,Check,No Nitrogen,2
+3064,Check,Check,No Nitrogen,2
+3065,PI 587129,H99,No Nitrogen,2
+3066,PI 587129,H99,No Nitrogen,2
+3067,PI 587127,H105W,No Nitrogen,2
+3068,PI 587127,H105W,No Nitrogen,2
+3069,Check,Check,No Nitrogen,2
+3070,Check,Check,No Nitrogen,2
+3071,PI 587145,NC268,No Nitrogen,2
+3072,PI 587145,NC268,No Nitrogen,2
+3073,Ames 27162,NC332,No Nitrogen,2
+3074,Ames 27162,NC332,No Nitrogen,2
+3075,PI 587154,W153R,No Nitrogen,2
+3076,PI 587154,W153R,No Nitrogen,2
+3077,PI 550490,ND246,No Nitrogen,2
+3078,PI 550490,ND246,No Nitrogen,2
+3079,Ames 28186,P39,No Nitrogen,2
+3080,Ames 28186,P39,No Nitrogen,2
+3081,Ames 19016,Va59,No Nitrogen,2
+3082,Ames 19016,Va59,No Nitrogen,2
+3083,PI 524969,SD44,No Nitrogen,2
+3084,PI 524969,SD44,No Nitrogen,2
+3101,Ames 27082,CML108,No Nitrogen,2
+3102,Ames 27082,CML108,No Nitrogen,2
+3103,Check,Check,No Nitrogen,2
+3104,Check,Check,No Nitrogen,2
+3105,Check,Check,No Nitrogen,2
+3106,Check,Check,No Nitrogen,2
+3107,Check,Check,No Nitrogen,2
+3108,Check,Check,No Nitrogen,2
+3109,Check,Check,No Nitrogen,2
+3110,Check,Check,No Nitrogen,2
+3111,PI 550465,B68,No Nitrogen,2
+3112,PI 550465,B68,No Nitrogen,2
+3113,Check,Check,No Nitrogen,2
+3114,Check,Check,No Nitrogen,2
+3115,Ames 27166,NC340,No Nitrogen,2
+3116,Ames 27166,NC340,No Nitrogen,2
+3117,Ames 27169,NC346,No Nitrogen,2
+3118,Ames 27169,NC346,No Nitrogen,2
+3119,Ames 27155,NC318,No Nitrogen,2
+3120,Ames 27155,NC318,No Nitrogen,2
+3121,Ames 10248,GA209,No Nitrogen,2
+3122,Ames 10248,GA209,No Nitrogen,2
+3123,Ames 27133,M37W,No Nitrogen,2
+3124,Ames 27133,M37W,No Nitrogen,2
+3125,Ames 27165,NC338,No Nitrogen,2
+3126,Ames 27165,NC338,No Nitrogen,2
+3127,Ames 27121,K64,No Nitrogen,2
+3128,Ames 27121,K64,No Nitrogen,2
+3129,PI 587147,Pa91,No Nitrogen,2
+3130,PI 587147,Pa91,No Nitrogen,2
+3131,PI 550522,T232,No Nitrogen,2
+3132,PI 550522,T232,No Nitrogen,2
+3133,Check,Check,No Nitrogen,2
+3134,Check,Check,No Nitrogen,2
+3135,PI 506255,Tzi25,No Nitrogen,2
+3136,PI 506255,Tzi25,No Nitrogen,2
+3137,PI 606330,DE2,No Nitrogen,2
+3138,PI 606330,DE2,No Nitrogen,2
+3139,Ames 27119,Il101T,No Nitrogen,2
+3140,Ames 27119,Il101T,No Nitrogen,2
+3141,Ames 27129,KUI2021,No Nitrogen,2
+3142,Ames 27129,KUI2021,No Nitrogen,2
+3143,Ames 27067,C49A,No Nitrogen,2
+3144,Ames 27067,C49A,No Nitrogen,2
+3145,PI 607521,A661,No Nitrogen,2
+3146,PI 607521,A661,No Nitrogen,2
+3147,PI 608774,B75,No Nitrogen,2
+3148,PI 608774,B75,No Nitrogen,2
+3149,PI 587139,A619,No Nitrogen,2
+3150,PI 587139,A619,No Nitrogen,2
+3151,PI 594046,B103,No Nitrogen,2
+3152,PI 594046,B103,No Nitrogen,2
+3153,NSL 81599,A659,No Nitrogen,2
+3154,NSL 81599,A659,No Nitrogen,2
+3155,PI 587138,A554,No Nitrogen,2
+3156,PI 587138,A554,No Nitrogen,2
+3157,Ames 27106,CO125,No Nitrogen,2
+3158,Ames 27106,CO125,No Nitrogen,2
+3159,PI 686057,I29,No Nitrogen,2
+3160,PI 686057,I29,No Nitrogen,2
+3161,Ames 20190,CM37,No Nitrogen,2
+3162,Ames 20190,CM37,No Nitrogen,2
+3163,Ames 24752,MS1334,No Nitrogen,2
+3164,Ames 24752,MS1334,No Nitrogen,2
+3165,Ames 27111,EP1,No Nitrogen,2
+3166,Ames 27111,EP1,No Nitrogen,2
+3167,Ames 27107,CO255,No Nitrogen,2
+3168,Ames 27107,CO255,No Nitrogen,2
+3169,PI 686063,IDS91,No Nitrogen,2
+3170,PI 686063,IDS91,No Nitrogen,2
+3171,Ames 27152,NC312,No Nitrogen,2
+3172,Ames 27152,NC312,No Nitrogen,2
+3173,Check,Check,No Nitrogen,2
+3174,Check,Check,No Nitrogen,2
+3175,Ames 19330,W182B,No Nitrogen,2
+3176,Ames 19330,W182B,No Nitrogen,2
+3177,Ames 19288,Oh43,No Nitrogen,2
+3178,Ames 19288,Oh43,No Nitrogen,2
+3179,Ames 27154,NC316,No Nitrogen,2
+3180,Ames 27154,NC316,No Nitrogen,2
+3181,Ames 27142,NC292,No Nitrogen,2
+3182,Ames 27142,NC292,No Nitrogen,2
+3183,Ames 27163,NC334,No Nitrogen,2
+3184,Ames 27163,NC334,No Nitrogen,2
+3201,PI 587130,4722,No Nitrogen,2
+3202,PI 587130,4722,No Nitrogen,2
+3203,Check,Check,No Nitrogen,2
+3204,Check,Check,No Nitrogen,2
+3205,Ames 27096,CML322,No Nitrogen,2
+3206,Ames 27096,CML322,No Nitrogen,2
+3207,Ames 27101,CML333,No Nitrogen,2
+3208,Ames 27101,CML333,No Nitrogen,2
+3209,Ames 27085,CML158Q,No Nitrogen,2
+3210,Ames 27085,CML158Q,No Nitrogen,2
+3211,Check,Check,No Nitrogen,2
+3212,Check,Check,No Nitrogen,2
+3213,Ames 27086,CML218,No Nitrogen,2
+3214,Ames 27086,CML218,No Nitrogen,2
+3215,Ames 27170,NC348,No Nitrogen,2
+3216,Ames 27170,NC348,No Nitrogen,2
+3217,PI 531084,NC258,No Nitrogen,2
+3218,PI 531084,NC258,No Nitrogen,2
+3219,Ames 27144,NC296,No Nitrogen,2
+3220,Ames 27144,NC296,No Nitrogen,2
+3221,NSL 30038,K4,No Nitrogen,2
+3222,NSL 30038,K4,No Nitrogen,2
+3223,PI 587144,Mo24W,No Nitrogen,2
+3224,PI 587144,Mo24W,No Nitrogen,2
+3225,Ames 27110,E2558W,No Nitrogen,2
+3226,Ames 27110,E2558W,No Nitrogen,2
+3227,Ames 12729,NC222,No Nitrogen,2
+3228,Ames 12729,NC222,No Nitrogen,2
+3229,Ames 27131,Ky226,No Nitrogen,2
+3230,Ames 27131,Ky226,No Nitrogen,2
+3231,Check,Check,No Nitrogen,2
+3232,Check,Check,No Nitrogen,2
+3233,PI 506247,Tzi9,No Nitrogen,2
+3234,PI 506247,Tzi9,No Nitrogen,2
+3235,Ames 27189,SC55,No Nitrogen,2
+3236,Ames 27189,SC55,No Nitrogen,2
+3237,PI 540745,Tzi11,No Nitrogen,2
+3238,PI 540745,Tzi11,No Nitrogen,2
+3239,Ames 27179,NC366,No Nitrogen,2
+3240,Ames 27179,NC366,No Nitrogen,2
+3241,Check,Check,No Nitrogen,2
+3242,Check,Check,No Nitrogen,2
+3243,Ames 23405,A239,No Nitrogen,2
+3244,Ames 23405,A239,No Nitrogen,2
+3245,Ames 19313,C123,No Nitrogen,2
+3246,Ames 19313,C123,No Nitrogen,2
+3247,Ames 19316,CM174,No Nitrogen,2
+3248,Ames 19316,CM174,No Nitrogen,2
+3249,PI 550483,B76,No Nitrogen,2
+3250,PI 550483,B76,No Nitrogen,2
+3251,PI 587141,A654,No Nitrogen,2
+3252,PI 587141,A654,No Nitrogen,2
+3253,PI 550440,B64,No Nitrogen,2
+3254,PI 550440,B64,No Nitrogen,2
+3255,Ames 19308,A634,No Nitrogen,2
+3256,Ames 19308,A634,No Nitrogen,2
+3257,Ames 24734,MS153,No Nitrogen,2
+3258,Ames 24734,MS153,No Nitrogen,2
+3259,PI 257507,F7,No Nitrogen,2
+3260,PI 257507,F7,No Nitrogen,2
+3261,Ames 27105,CO106,No Nitrogen,2
+3262,Ames 27105,CO106,No Nitrogen,2
+3263,Ames 27104,CMV3,No Nitrogen,2
+3264,Ames 27104,CMV3,No Nitrogen,2
+3265,NSL 30867,M14,No Nitrogen,2
+3266,NSL 30867,M14,No Nitrogen,2
+3267,Ames 28364,IA2132,No Nitrogen,2
+3268,Ames 28364,IA2132,No Nitrogen,2
+3269,Ames 27070,CM7,No Nitrogen,2
+3270,Ames 27070,CM7,No Nitrogen,2
+3271,PI 531085,NC262,No Nitrogen,2
+3272,PI 531085,NC262,No Nitrogen,2
+3273,Check,Check,No Nitrogen,2
+3274,Check,Check,No Nitrogen,2
+3275,Ames 19326,R168,No Nitrogen,2
+3276,Ames 19326,R168,No Nitrogen,2
+3277,Ames 27150,NC308,No Nitrogen,2
+3278,Ames 27150,NC308,No Nitrogen,2
+3279,PI 550566,N192,No Nitrogen,2
+3280,PI 550566,N192,No Nitrogen,2
+3281,Ames 27161,NC330,No Nitrogen,2
+3282,Ames 27161,NC330,No Nitrogen,2
+3283,Check,Check,No Nitrogen,2
+3284,Check,Check,No Nitrogen,2
+3301,Ames 19309,A635,No Nitrogen,2
+3302,Ames 19309,A635,No Nitrogen,2
+3303,Check,Check,No Nitrogen,2
+3304,Check,Check,No Nitrogen,2
+3305,Ames 26138,CI187-2,No Nitrogen,2
+3306,Ames 26138,CI187-2,No Nitrogen,2
+3307,Ames 27087,CML220,No Nitrogen,2
+3308,Ames 27087,CML220,No Nitrogen,2
+3309,PI 608766,B79,No Nitrogen,2
+3310,PI 608766,B79,No Nitrogen,2
+3311,Ames 27083,CML154Q,No Nitrogen,2
+3312,Ames 27083,CML154Q,No Nitrogen,2
+3313,Ames 27112,F2834T,No Nitrogen,2
+3314,Ames 27112,F2834T,No Nitrogen,2
+3315,Check,Check,No Nitrogen,2
+3316,Check,Check,No Nitrogen,2
+3317,Ames 27164,NC336,No Nitrogen,2
+3318,Ames 27164,NC336,No Nitrogen,2
+3319,Ames 12732,NC232,No Nitrogen,2
+3320,Ames 12732,NC232,No Nitrogen,2
+3321,Ames 27137,N6,No Nitrogen,2
+3322,Ames 27137,N6,No Nitrogen,2
+3323,PI 583351,Mo46,No Nitrogen,2
+3324,PI 583351,Mo46,No Nitrogen,2
+3325,Ames 27147,NC302,No Nitrogen,2
+3326,Ames 27147,NC302,No Nitrogen,2
+3327,Ames 28366,N7A,No Nitrogen,2
+3328,Ames 28366,N7A,No Nitrogen,2
+3329,Ames 27183,Oh43E,No Nitrogen,2
+3330,Ames 27183,Oh43E,No Nitrogen,2
+3331,Ames 19323,Oh7B,No Nitrogen,2
+3332,Ames 19323,Oh7B,No Nitrogen,2
+3333,Ames 27184,Pa762,No Nitrogen,2
+3334,Ames 27184,Pa762,No Nitrogen,2
+3335,PI 587150,Va35,No Nitrogen,2
+3336,PI 587150,Va35,No Nitrogen,2
+3337,PI 587152,W64A,No Nitrogen,2
+3338,PI 587152,W64A,No Nitrogen,2
+3339,PI 686065,SA24,No Nitrogen,2
+3340,PI 686065,SA24,No Nitrogen,2
+3341,Check,Check,No Nitrogen,2
+3342,Check,Check,No Nitrogen,2
+3343,PI 564682,B97,No Nitrogen,2
+3344,PI 564682,B97,No Nitrogen,2
+3345,NSL 30904,4226,No Nitrogen,2
+3346,NSL 30904,4226,No Nitrogen,2
+3347,PI 550467,B37,No Nitrogen,2
+3348,PI 550467,B37,No Nitrogen,2
+3349,PI 550469,B46,No Nitrogen,2
+3350,PI 550469,B46,No Nitrogen,2
+3351,PI 608767,B84,No Nitrogen,2
+3352,PI 608767,B84,No Nitrogen,2
+3353,PI 597927,B109,No Nitrogen,2
+3354,PI 597927,B109,No Nitrogen,2
+3355,Ames 27065,B73Htrhm,No Nitrogen,2
+3356,Ames 27065,B73Htrhm,No Nitrogen,2
+3357,NSL 30894,R177,No Nitrogen,2
+3358,NSL 30894,R177,No Nitrogen,2
+3359,NSL 65874,Os420,No Nitrogen,2
+3360,NSL 65874,Os420,No Nitrogen,2
+3361,Ames 27159,NC326,No Nitrogen,2
+3362,Ames 27159,NC326,No Nitrogen,2
+3363,Ames 27143,NC294,No Nitrogen,2
+3364,Ames 27143,NC294,No Nitrogen,2
+3365,Ames 27180,NC368,No Nitrogen,2
+3366,Ames 27180,NC368,No Nitrogen,2
+3367,Ames 27118,Il14H,No Nitrogen,2
+3368,Ames 27118,Il14H,No Nitrogen,2
+3369,NSL 28966,Oh40B,No Nitrogen,2
+3370,NSL 28966,Oh40B,No Nitrogen,2
+3371,PI 587132,Sg1533,No Nitrogen,2
+3372,PI 587132,Sg1533,No Nitrogen,2
+3373,Ames 28290,C49,No Nitrogen,2
+3374,Ames 28290,C49,No Nitrogen,2
+3375,PI 587149,Va26,No Nitrogen,2
+3376,PI 587149,Va26,No Nitrogen,2
+3377,Check,Check,No Nitrogen,2
+3378,Check,Check,No Nitrogen,2
+3379,Ames 24989,Va99,No Nitrogen,2
+3380,Ames 24989,Va99,No Nitrogen,2
+3381,Ames 27196,Yu796_NS,No Nitrogen,2
+3382,Ames 27196,Yu796_NS,No Nitrogen,2
+3383,PI 550518,T8,No Nitrogen,2
+3384,PI 550518,T8,No Nitrogen,2
+3401,PI 587131,HP301,No Nitrogen,2
+3402,PI 587131,HP301,No Nitrogen,2
+3403,PI 550472,B57,No Nitrogen,2
+3404,PI 550472,B57,No Nitrogen,2
+3405,PI 594047,B104,No Nitrogen,2
+3406,PI 594047,B104,No Nitrogen,2
+3407,Ames 22754,K55,No Nitrogen,2
+3408,Ames 22754,K55,No Nitrogen,2
+3409,Check,Check,No Nitrogen,2
+3410,Check,Check,No Nitrogen,2
+3411,Check,Check,No Nitrogen,2
+3412,Check,Check,No Nitrogen,2
+3413,Ames 21512,CI31A,No Nitrogen,2
+3414,Ames 21512,CI31A,No Nitrogen,2
+3415,Ames 27172,NC352,No Nitrogen,2
+3416,Ames 27172,NC352,No Nitrogen,2
+3417,Check,Check,No Nitrogen,2
+3418,Check,Check,No Nitrogen,2
+3419,PI 520774,NC264,No Nitrogen,2
+3420,PI 520774,NC264,No Nitrogen,2
+3421,Ames 27138,N28Ht,No Nitrogen,2
+3422,Ames 27138,N28Ht,No Nitrogen,2
+3423,PI 543916,Mp339,No Nitrogen,2
+3424,PI 543916,Mp339,No Nitrogen,2
+3425,Ames 27141,NC290A,No Nitrogen,2
+3426,Ames 27141,NC290A,No Nitrogen,2
+3427,PI 550555,NC250,No Nitrogen,2
+3428,PI 550555,NC250,No Nitrogen,2
+3429,Ames 19000,VaW6,No Nitrogen,2
+3430,Ames 19000,VaW6,No Nitrogen,2
+3431,NSL 53094,SC357,No Nitrogen,2
+3432,NSL 53094,SC357,No Nitrogen,2
+3433,Ames 27185,Pa875,No Nitrogen,2
+3434,Ames 27185,Pa875,No Nitrogen,2
+3435,Ames 27181,NC370,No Nitrogen,2
+3436,Ames 27181,NC370,No Nitrogen,2
+3437,Check,Check,No Nitrogen,2
+3438,Check,Check,No Nitrogen,2
+3439,Ames 8399,W117HT,No Nitrogen,2
+3440,Ames 8399,W117HT,No Nitrogen,2
+3441,PI 587151,Va102,No Nitrogen,2
+3442,PI 587151,Va102,No Nitrogen,2
+3443,PI 587140,A632,No Nitrogen,2
+3444,PI 587140,A632,No Nitrogen,2
+3445,Check,Check,No Nitrogen,2
+3446,Check,Check,No Nitrogen,2
+3447,Ames 27069,CH701-30,No Nitrogen,2
+3448,Ames 27069,CH701-30,No Nitrogen,2
+3449,PI 550461,B14A,No Nitrogen,2
+3450,PI 550461,B14A,No Nitrogen,2
+3451,PI 608765,B77,No Nitrogen,2
+3452,PI 608765,B77,No Nitrogen,2
+3453,PI 686059,IDS28,No Nitrogen,2
+3454,PI 686059,IDS28,No Nitrogen,2
+3455,Ames 23503,A680,No Nitrogen,2
+3456,Ames 23503,A680,No Nitrogen,2
+3457,Ames 28939,Mo44,No Nitrogen,2
+3458,Ames 28939,Mo44,No Nitrogen,2
+3459,Ames 27149,NC306,No Nitrogen,2
+3460,Ames 27149,NC306,No Nitrogen,2
+3461,Check,Check,No Nitrogen,2
+3462,Check,Check,No Nitrogen,2
+3463,PI 517974,Pa880,No Nitrogen,2
+3464,PI 517974,Pa880,No Nitrogen,2
+3465,Ames 27178,NC364,No Nitrogen,2
+3466,Ames 27178,NC364,No Nitrogen,2
+3467,Ames 27168,NC344,No Nitrogen,2
+3468,Ames 27168,NC344,No Nitrogen,2
+3469,NSL 65873,L317,No Nitrogen,2
+3470,NSL 65873,L317,No Nitrogen,2
+3471,Ames 19328,Va22,No Nitrogen,2
+3472,Ames 19328,Va22,No Nitrogen,2
+3473,Ames 27187,R4,No Nitrogen,2
+3474,Ames 27187,R4,No Nitrogen,2
+3475,Ames 31535,38-11Goodman-Buckler,No Nitrogen,2
+3476,Ames 31535,38-11Goodman-Buckler,No Nitrogen,2
+3477,CIze 44,CI44,No Nitrogen,2
+3478,CIze 44,CI44,No Nitrogen,2
+3479,Ames 31534,CI90CGoodman-Buckler,No Nitrogen,2
+3480,Ames 31534,CI90CGoodman-Buckler,No Nitrogen,2
+3481,Ames 28367,CI7Goodman-Buckler,No Nitrogen,2
+3482,Ames 28367,CI7Goodman-Buckler,No Nitrogen,2
+3483,Check,Check,No Nitrogen,2
+3484,Check,Check,No Nitrogen,2
+3501,Ames 27097,CML323,No Nitrogen,2
+3502,Ames 27097,CML323,No Nitrogen,2
+3503,PI 606329,DE1,No Nitrogen,2
+3504,PI 606329,DE1,No Nitrogen,2
+3505,Ames 27120,Il677a,No Nitrogen,2
+3506,Ames 27120,Il677a,No Nitrogen,2
+3507,Ames 22440,CI90C,No Nitrogen,2
+3508,Ames 22440,CI90C,No Nitrogen,2
+3509,PI 587128,H84,No Nitrogen,2
+3510,PI 587128,H84,No Nitrogen,2
+3511,Ames 19319,H95,No Nitrogen,2
+3512,Ames 19319,H95,No Nitrogen,2
+3513,PI 594048,B105,No Nitrogen,2
+3514,PI 594048,B105,No Nitrogen,2
+3515,Ames 27158,NC324,No Nitrogen,2
+3516,Ames 27158,NC324,No Nitrogen,2
+3517,Ames 27260,Ki44,No Nitrogen,2
+3518,Ames 27260,Ki44,No Nitrogen,2
+3519,Check,Check,No Nitrogen,2
+3520,Check,Check,No Nitrogen,2
+3521,Ames 27175,NC358,No Nitrogen,2
+3522,Ames 27175,NC358,No Nitrogen,2
+3523,Ames 27174,NC356,No Nitrogen,2
+3524,Ames 27174,NC356,No Nitrogen,2
+3525,Check,Check,No Nitrogen,2
+3526,Check,Check,No Nitrogen,2
+3527,Ames 12731,NC230,No Nitrogen,2
+3528,Ames 12731,NC230,No Nitrogen,2
+3529,NSL 30053,W22,No Nitrogen,2
+3530,NSL 30053,W22,No Nitrogen,2
+3531,Ames 27182,NC372,No Nitrogen,2
+3532,Ames 27182,NC372,No Nitrogen,2
+3533,PI 573098,Oh603,No Nitrogen,2
+3534,PI 573098,Oh603,No Nitrogen,2
+3535,Ames 27194,W401,No Nitrogen,2
+3536,Ames 27194,W401,No Nitrogen,2
+3537,Ames 27176,NC360,No Nitrogen,2
+3538,Ames 27176,NC360,No Nitrogen,2
+3539,Ames 27190,T234,No Nitrogen,2
+3540,Ames 27190,T234,No Nitrogen,2
+3541,PI 686066,SG18,No Nitrogen,2
+3542,PI 686066,SG18,No Nitrogen,2
+3543,Ames 26769,B2,No Nitrogen,2
+3544,Ames 26769,B2,No Nitrogen,2
+3545,Ames 27114,H91,No Nitrogen,2
+3546,Ames 27114,H91,No Nitrogen,2
+3547,Ames 27066,B164,No Nitrogen,2
+3548,Ames 27066,B164,No Nitrogen,2
+3549,PI 550473,B73,No Nitrogen,2
+3550,PI 550473,B73,No Nitrogen,2
+3551,Check,Check,No Nitrogen,2
+3552,Check,Check,No Nitrogen,2
+3553,Check,Check,No Nitrogen,2
+3554,Check,Check,No Nitrogen,2
+3555,PI 587142,A679,No Nitrogen,2
+3556,PI 587142,A679,No Nitrogen,2
+3557,Ames 27167,NC342,No Nitrogen,2
+3558,Ames 27167,NC342,No Nitrogen,2
+3559,PI 558532,Mo17,No Nitrogen,2
+3560,PI 558532,Mo17,No Nitrogen,2
+3561,Ames 27177,NC362,No Nitrogen,2
+3562,Ames 27177,NC362,No Nitrogen,2
+3563,Ames 27160,NC328,No Nitrogen,2
+3564,Ames 27160,NC328,No Nitrogen,2
+3565,Ames 27151,NC310,No Nitrogen,2
+3566,Ames 27151,NC310,No Nitrogen,2
+3567,PI 583350,Mo45,No Nitrogen,2
+3568,PI 583350,Mo45,No Nitrogen,2
+3569,Ames 27140,NC260,No Nitrogen,2
+3570,Ames 27140,NC260,No Nitrogen,2
+3571,Ames 19293,Wf9,No Nitrogen,2
+3572,Ames 19293,Wf9,No Nitrogen,2
+3573,PI 606768,SD40,No Nitrogen,2
+3574,PI 606768,SD40,No Nitrogen,2
+3575,PI 587125,CO109,No Nitrogen,2
+3576,PI 587125,CO109,No Nitrogen,2
+3577,Ames 26771,33-16,No Nitrogen,2
+3578,Ames 26771,33-16,No Nitrogen,2
+3579,Ames 31536,A214NGoodman-Buckler,No Nitrogen,2
+3580,Ames 31536,A214NGoodman-Buckler,No Nitrogen,2
+3581,PI 592734,R229,No Nitrogen,2
+3582,PI 592734,R229,No Nitrogen,2
+3583,Ames 27193,Va85,No Nitrogen,2
+3584,Ames 27193,Va85,No Nitrogen,2
+4001,PI 550467,B37,Nitrogen,2
+4002,PI 550467,B37,Nitrogen,2
+4003,PI 550461,B14A,Nitrogen,2
+4004,PI 550461,B14A,Nitrogen,2
+4005,NSL 30904,4226,Nitrogen,2
+4006,NSL 30904,4226,Nitrogen,2
+4007,PI 564682,B97,Nitrogen,2
+4008,PI 564682,B97,Nitrogen,2
+4009,PI 550473,B73,Nitrogen,2
+4010,PI 550473,B73,Nitrogen,2
+4011,PI 587142,A679,Nitrogen,2
+4012,PI 587142,A679,Nitrogen,2
+4013,Check,Check,Nitrogen,2
+4014,Check,Check,Nitrogen,2
+4015,Ames 27177,NC362,Nitrogen,2
+4016,Ames 27177,NC362,Nitrogen,2
+4017,Ames 27167,NC342,Nitrogen,2
+4018,Ames 27167,NC342,Nitrogen,2
+4019,Ames 27178,NC364,Nitrogen,2
+4020,Ames 27178,NC364,Nitrogen,2
+4021,Ames 27143,NC294,Nitrogen,2
+4022,Ames 27143,NC294,Nitrogen,2
+4023,Check,Check,Nitrogen,2
+4024,Check,Check,Nitrogen,2
+4025,Ames 27140,NC260,Nitrogen,2
+4026,Ames 27140,NC260,Nitrogen,2
+4027,Ames 27160,NC328,Nitrogen,2
+4028,Ames 27160,NC328,Nitrogen,2
+4029,Ames 19328,Va22,Nitrogen,2
+4030,Ames 19328,Va22,Nitrogen,2
+4031,Ames 19293,Wf9,Nitrogen,2
+4032,Ames 19293,Wf9,Nitrogen,2
+4033,Ames 31534,CI90CGoodman-Buckler,Nitrogen,2
+4034,Ames 31534,CI90CGoodman-Buckler,Nitrogen,2
+4035,Ames 27196,Yu796_NS,Nitrogen,2
+4036,Ames 27196,Yu796_NS,Nitrogen,2
+4037,PI 550518,T8,Nitrogen,2
+4038,PI 550518,T8,Nitrogen,2
+4039,Ames 26771,33-16,Nitrogen,2
+4040,Ames 26771,33-16,Nitrogen,2
+4041,PI 587149,Va26,Nitrogen,2
+4042,PI 587149,Va26,Nitrogen,2
+4043,Ames 27097,CML323,Nitrogen,2
+4044,Ames 27097,CML323,Nitrogen,2
+4045,Ames 19319,H95,Nitrogen,2
+4046,Ames 19319,H95,Nitrogen,2
+4047,PI 608766,B79,Nitrogen,2
+4048,PI 608766,B79,Nitrogen,2
+4049,PI 606329,DE1,Nitrogen,2
+4050,PI 606329,DE1,Nitrogen,2
+4051,Ames 27112,F2834T,Nitrogen,2
+4052,Ames 27112,F2834T,Nitrogen,2
+4053,Ames 19309,A635,Nitrogen,2
+4054,Ames 19309,A635,Nitrogen,2
+4055,PI 594048,B105,Nitrogen,2
+4056,PI 594048,B105,Nitrogen,2
+4057,Ames 27138,N28Ht,Nitrogen,2
+4058,Ames 27138,N28Ht,Nitrogen,2
+4059,Ames 27158,NC324,Nitrogen,2
+4060,Ames 27158,NC324,Nitrogen,2
+4061,PI 520774,NC264,Nitrogen,2
+4062,PI 520774,NC264,Nitrogen,2
+4063,Ames 27175,NC358,Nitrogen,2
+4064,Ames 27175,NC358,Nitrogen,2
+4065,Check,Check,Nitrogen,2
+4066,Check,Check,Nitrogen,2
+4067,PI 583351,Mo46,Nitrogen,2
+4068,PI 583351,Mo46,Nitrogen,2
+4069,Ames 27141,NC290A,Nitrogen,2
+4070,Ames 27141,NC290A,Nitrogen,2
+4071,Ames 27190,T234,Nitrogen,2
+4072,Ames 27190,T234,Nitrogen,2
+4073,Ames 8399,W117HT,Nitrogen,2
+4074,Ames 8399,W117HT,Nitrogen,2
+4075,PI 587151,Va102,Nitrogen,2
+4076,PI 587151,Va102,Nitrogen,2
+4077,PI 686066,SG18,Nitrogen,2
+4078,PI 686066,SG18,Nitrogen,2
+4079,Ames 19000,VaW6,Nitrogen,2
+4080,Ames 19000,VaW6,Nitrogen,2
+4081,PI 573098,Oh603,Nitrogen,2
+4082,PI 573098,Oh603,Nitrogen,2
+4083,PI 587150,Va35,Nitrogen,2
+4084,PI 587150,Va35,Nitrogen,2
+4101,PI 608765,B77,Nitrogen,2
+4102,PI 608765,B77,Nitrogen,2
+4103,Ames 23503,A680,Nitrogen,2
+4104,Ames 23503,A680,Nitrogen,2
+4105,Check,Check,Nitrogen,2
+4106,Check,Check,Nitrogen,2
+4107,PI 686059,IDS28,Nitrogen,2
+4108,PI 686059,IDS28,Nitrogen,2
+4109,PI 550469,B46,Nitrogen,2
+4110,PI 550469,B46,Nitrogen,2
+4111,Ames 27114,H91,Nitrogen,2
+4112,Ames 27114,H91,Nitrogen,2
+4113,PI 597927,B109,Nitrogen,2
+4114,PI 597927,B109,Nitrogen,2
+4115,Ames 27151,NC310,Nitrogen,2
+4116,Ames 27151,NC310,Nitrogen,2
+4117,NSL 30894,R177,Nitrogen,2
+4118,NSL 30894,R177,Nitrogen,2
+4119,Ames 27118,Il14H,Nitrogen,2
+4120,Ames 27118,Il14H,Nitrogen,2
+4121,NSL 65873,L317,Nitrogen,2
+4122,NSL 65873,L317,Nitrogen,2
+4123,Ames 27149,NC306,Nitrogen,2
+4124,Ames 27149,NC306,Nitrogen,2
+4125,NSL 65874,Os420,Nitrogen,2
+4126,NSL 65874,Os420,Nitrogen,2
+4127,PI 583350,Mo45,Nitrogen,2
+4128,PI 583350,Mo45,Nitrogen,2
+4129,Ames 27187,R4,Nitrogen,2
+4130,Ames 27187,R4,Nitrogen,2
+4131,PI 606768,SD40,Nitrogen,2
+4132,PI 606768,SD40,Nitrogen,2
+4133,Check,Check,Nitrogen,2
+4134,Check,Check,Nitrogen,2
+4135,PI 592734,R229,Nitrogen,2
+4136,PI 592734,R229,Nitrogen,2
+4137,PI 587125,CO109,Nitrogen,2
+4138,PI 587125,CO109,Nitrogen,2
+4139,Ames 28290,C49,Nitrogen,2
+4140,Ames 28290,C49,Nitrogen,2
+4141,Ames 27193,Va85,Nitrogen,2
+4142,Ames 27193,Va85,Nitrogen,2
+4143,Ames 26138,CI187-2,Nitrogen,2
+4144,Ames 26138,CI187-2,Nitrogen,2
+4145,Ames 27087,CML220,Nitrogen,2
+4146,Ames 27087,CML220,Nitrogen,2
+4147,Ames 27083,CML154Q,Nitrogen,2
+4148,Ames 27083,CML154Q,Nitrogen,2
+4149,Ames 19284,C103,Nitrogen,2
+4150,Ames 19284,C103,Nitrogen,2
+4151,Ames 22754,K55,Nitrogen,2
+4152,Ames 22754,K55,Nitrogen,2
+4153,PI 587131,HP301,Nitrogen,2
+4154,PI 587131,HP301,Nitrogen,2
+4155,Check,Check,Nitrogen,2
+4156,Check,Check,Nitrogen,2
+4157,Ames 27172,NC352,Nitrogen,2
+4158,Ames 27172,NC352,Nitrogen,2
+4159,Ames 27137,N6,Nitrogen,2
+4160,Ames 27137,N6,Nitrogen,2
+4161,Ames 12732,NC232,Nitrogen,2
+4162,Ames 12732,NC232,Nitrogen,2
+4163,Ames 27260,Ki44,Nitrogen,2
+4164,Ames 27260,Ki44,Nitrogen,2
+4165,Ames 27174,NC356,Nitrogen,2
+4166,Ames 27174,NC356,Nitrogen,2
+4167,Ames 27261,NC298,Nitrogen,2
+4168,Ames 27261,NC298,Nitrogen,2
+4169,Ames 27164,NC336,Nitrogen,2
+4170,Ames 27164,NC336,Nitrogen,2
+4171,Ames 27176,NC360,Nitrogen,2
+4172,Ames 27176,NC360,Nitrogen,2
+4173,Ames 27182,NC372,Nitrogen,2
+4174,Ames 27182,NC372,Nitrogen,2
+4175,Check,Check,Nitrogen,2
+4176,Check,Check,Nitrogen,2
+4177,PI 686065,SA24,Nitrogen,2
+4178,PI 686065,SA24,Nitrogen,2
+4179,PI 587152,W64A,Nitrogen,2
+4180,PI 587152,W64A,Nitrogen,2
+4181,Ames 27194,W401,Nitrogen,2
+4182,Ames 27194,W401,Nitrogen,2
+4183,Ames 27183,Oh43E,Nitrogen,2
+4184,Ames 27183,Oh43E,Nitrogen,2
+4201,Ames 27065,B73Htrhm,Nitrogen,2
+4202,Ames 27065,B73Htrhm,Nitrogen,2
+4203,Ames 27069,CH701-30,Nitrogen,2
+4204,Ames 27069,CH701-30,Nitrogen,2
+4205,PI 608767,B84,Nitrogen,2
+4206,PI 608767,B84,Nitrogen,2
+4207,Check,Check,Nitrogen,2
+4208,Check,Check,Nitrogen,2
+4209,Ames 27066,B164,Nitrogen,2
+4210,Ames 27066,B164,Nitrogen,2
+4211,Ames 26769,B2,Nitrogen,2
+4212,Ames 26769,B2,Nitrogen,2
+4213,PI 587140,A632,Nitrogen,2
+4214,PI 587140,A632,Nitrogen,2
+4215,PI 517974,Pa880,Nitrogen,2
+4216,PI 517974,Pa880,Nitrogen,2
+4217,NSL 28966,Oh40B,Nitrogen,2
+4218,NSL 28966,Oh40B,Nitrogen,2
+4219,Ames 28939,Mo44,Nitrogen,2
+4220,Ames 28939,Mo44,Nitrogen,2
+4221,Ames 27180,NC368,Nitrogen,2
+4222,Ames 27180,NC368,Nitrogen,2
+4223,Ames 27159,NC326,Nitrogen,2
+4224,Ames 27159,NC326,Nitrogen,2
+4225,PI 558532,Mo17,Nitrogen,2
+4226,PI 558532,Mo17,Nitrogen,2
+4227,Ames 27168,NC344,Nitrogen,2
+4228,Ames 27168,NC344,Nitrogen,2
+4229,Ames 31536,A214NGoodman-Buckler,Nitrogen,2
+4230,Ames 31536,A214NGoodman-Buckler,Nitrogen,2
+4231,CIze 44,CI44,Nitrogen,2
+4232,CIze 44,CI44,Nitrogen,2
+4233,Ames 28367,CI7Goodman-Buckler,Nitrogen,2
+4234,Ames 28367,CI7Goodman-Buckler,Nitrogen,2
+4235,PI 587132,Sg1533,Nitrogen,2
+4236,PI 587132,Sg1533,Nitrogen,2
+4237,Ames 24989,Va99,Nitrogen,2
+4238,Ames 24989,Va99,Nitrogen,2
+4239,Check,Check,Nitrogen,2
+4240,Check,Check,Nitrogen,2
+4241,Ames 31535,38-11Goodman-Buckler,Nitrogen,2
+4242,Ames 31535,38-11Goodman-Buckler,Nitrogen,2
+4243,PI 550472,B57,Nitrogen,2
+4244,PI 550472,B57,Nitrogen,2
+4245,Check,Check,Nitrogen,2
+4246,Check,Check,Nitrogen,2
+4247,Ames 22440,CI90C,Nitrogen,2
+4248,Ames 22440,CI90C,Nitrogen,2
+4249,Ames 21512,CI31A,Nitrogen,2
+4250,Ames 21512,CI31A,Nitrogen,2
+4251,PI 594047,B104,Nitrogen,2
+4252,PI 594047,B104,Nitrogen,2
+4253,PI 587128,H84,Nitrogen,2
+4254,PI 587128,H84,Nitrogen,2
+4255,Check,Check,Nitrogen,2
+4256,Check,Check,Nitrogen,2
+4257,Ames 28366,N7A,Nitrogen,2
+4258,Ames 28366,N7A,Nitrogen,2
+4259,PI 550555,NC250,Nitrogen,2
+4260,PI 550555,NC250,Nitrogen,2
+4261,PI 543916,Mp339,Nitrogen,2
+4262,PI 543916,Mp339,Nitrogen,2
+4263,Ames 27124,Ki11,Nitrogen,2
+4264,Ames 27124,Ki11,Nitrogen,2
+4265,Ames 12731,NC230,Nitrogen,2
+4266,Ames 12731,NC230,Nitrogen,2
+4267,Check,Check,Nitrogen,2
+4268,Check,Check,Nitrogen,2
+4269,Ames 27147,NC302,Nitrogen,2
+4270,Ames 27147,NC302,Nitrogen,2
+4271,NSL 53094,SC357,Nitrogen,2
+4272,NSL 53094,SC357,Nitrogen,2
+4273,Check,Check,Nitrogen,2
+4274,Check,Check,Nitrogen,2
+4275,Ames 27184,Pa762,Nitrogen,2
+4276,Ames 27184,Pa762,Nitrogen,2
+4277,Ames 27185,Pa875,Nitrogen,2
+4278,Ames 27185,Pa875,Nitrogen,2
+4279,Ames 27181,NC370,Nitrogen,2
+4280,Ames 27181,NC370,Nitrogen,2
+4281,NSL 30053,W22,Nitrogen,2
+4282,NSL 30053,W22,Nitrogen,2
+4283,Ames 19323,Oh7B,Nitrogen,2
+4284,Ames 19323,Oh7B,Nitrogen,2
+4301,Check,Check,Nitrogen,2
+4302,Check,Check,Nitrogen,2
+4303,Check,Check,Nitrogen,2
+4304,Check,Check,Nitrogen,2
+4305,Ames 26604,38-11,Nitrogen,2
+4306,Ames 26604,38-11,Nitrogen,2
+4307,Check,Check,Nitrogen,2
+4308,Check,Check,Nitrogen,2
+4309,Ames 27081,CML103,Nitrogen,2
+4310,Ames 27081,CML103,Nitrogen,2
+4311,Ames 27085,CML158Q,Nitrogen,2
+4312,Ames 27085,CML158Q,Nitrogen,2
+4313,PI 550465,B68,Nitrogen,2
+4314,PI 550465,B68,Nitrogen,2
+4315,Ames 27133,M37W,Nitrogen,2
+4316,Ames 27133,M37W,Nitrogen,2
+4317,Check,Check,Nitrogen,2
+4318,Check,Check,Nitrogen,2
+4319,Ames 10248,GA209,Nitrogen,2
+4320,Ames 10248,GA209,Nitrogen,2
+4321,PI 587144,Mo24W,Nitrogen,2
+4322,PI 587144,Mo24W,Nitrogen,2
+4323,Ames 12729,NC222,Nitrogen,2
+4324,Ames 12729,NC222,Nitrogen,2
+4325,Ames 27155,NC318,Nitrogen,2
+4326,Ames 27155,NC318,Nitrogen,2
+4327,Check,Check,Nitrogen,2
+4328,Check,Check,Nitrogen,2
+4329,PI 506247,Tzi9,Nitrogen,2
+4330,PI 506247,Tzi9,Nitrogen,2
+4331,Ames 27189,SC55,Nitrogen,2
+4332,Ames 27189,SC55,Nitrogen,2
+4333,Check,Check,Nitrogen,2
+4334,Check,Check,Nitrogen,2
+4335,PI 257506,F2,Nitrogen,2
+4336,PI 257506,F2,Nitrogen,2
+4337,Ames 22748,H100,Nitrogen,2
+4338,Ames 22748,H100,Nitrogen,2
+4339,PI 506255,Tzi25,Nitrogen,2
+4340,PI 506255,Tzi25,Nitrogen,2
+4341,Ames 27129,KUI2021,Nitrogen,2
+4342,Ames 27129,KUI2021,Nitrogen,2
+4343,Ames 23405,A239,Nitrogen,2
+4344,Ames 23405,A239,Nitrogen,2
+4345,PI 587141,A654,Nitrogen,2
+4346,PI 587141,A654,Nitrogen,2
+4347,Ames 22443,A188,Nitrogen,2
+4348,Ames 22443,A188,Nitrogen,2
+4349,PI 587139,A619,Nitrogen,2
+4350,PI 587139,A619,Nitrogen,2
+4351,PI 608774,B75,Nitrogen,2
+4352,PI 608774,B75,Nitrogen,2
+4353,Ames 27068,CH9,Nitrogen,2
+4354,Ames 27068,CH9,Nitrogen,2
+4355,PI 587143,A682,Nitrogen,2
+4356,PI 587143,A682,Nitrogen,2
+4357,PI 686057,I29,Nitrogen,2
+4358,PI 686057,I29,Nitrogen,2
+4359,Ames 27104,CMV3,Nitrogen,2
+4360,Ames 27104,CMV3,Nitrogen,2
+4361,Ames 27106,CO125,Nitrogen,2
+4362,Ames 27106,CO125,Nitrogen,2
+4363,PI 587127,H105W,Nitrogen,2
+4364,PI 587127,H105W,Nitrogen,2
+4365,Ames 24752,MS1334,Nitrogen,2
+4366,Ames 24752,MS1334,Nitrogen,2
+4367,PI 686063,IDS91,Nitrogen,2
+4368,PI 686063,IDS91,Nitrogen,2
+4369,NSL 30867,M14,Nitrogen,2
+4370,NSL 30867,M14,Nitrogen,2
+4371,Ames 19326,R168,Nitrogen,2
+4372,Ames 19326,R168,Nitrogen,2
+4373,Ames 27150,NC308,Nitrogen,2
+4374,Ames 27150,NC308,Nitrogen,2
+4375,PI 550490,ND246,Nitrogen,2
+4376,PI 550490,ND246,Nitrogen,2
+4377,Ames 28186,P39,Nitrogen,2
+4378,Ames 28186,P39,Nitrogen,2
+4379,Ames 19330,W182B,Nitrogen,2
+4380,Ames 19330,W182B,Nitrogen,2
+4381,Ames 27162,NC332,Nitrogen,2
+4382,Ames 27162,NC332,Nitrogen,2
+4383,PI 587154,W153R,Nitrogen,2
+4384,PI 587154,W153R,Nitrogen,2
+4401,Check,Check,Nitrogen,2
+4402,Check,Check,Nitrogen,2
+4403,Check,Check,Nitrogen,2
+4404,Check,Check,Nitrogen,2
+4405,Ames 27101,CML333,Nitrogen,2
+4406,Ames 27101,CML333,Nitrogen,2
+4407,Check,Check,Nitrogen,2
+4408,Check,Check,Nitrogen,2
+4409,Check,Check,Nitrogen,2
+4410,Check,Check,Nitrogen,2
+4411,Ames 27086,CML218,Nitrogen,2
+4412,Ames 27086,CML218,Nitrogen,2
+4413,Check,Check,Nitrogen,2
+4414,Check,Check,Nitrogen,2
+4415,Ames 27169,NC346,Nitrogen,2
+4416,Ames 27169,NC346,Nitrogen,2
+4417,Ames 28184,CML69,Nitrogen,2
+4418,Ames 28184,CML69,Nitrogen,2
+4419,Ames 27110,E2558W,Nitrogen,2
+4420,Ames 27110,E2558W,Nitrogen,2
+4421,Ames 27165,NC338,Nitrogen,2
+4422,Ames 27165,NC338,Nitrogen,2
+4423,NSL 30038,K4,Nitrogen,2
+4424,NSL 30038,K4,Nitrogen,2
+4425,NSL 22893,F44,Nitrogen,2
+4426,NSL 22893,F44,Nitrogen,2
+4427,Ames 27166,NC340,Nitrogen,2
+4428,Ames 27166,NC340,Nitrogen,2
+4429,PI 558520,Mo1W,Nitrogen,2
+4430,PI 558520,Mo1W,Nitrogen,2
+4431,Ames 26808,Ill.Hy,Nitrogen,2
+4432,Ames 26808,Ill.Hy,Nitrogen,2
+4433,Check,Check,Nitrogen,2
+4434,Check,Check,Nitrogen,2
+4435,Ames 27131,Ky226,Nitrogen,2
+4436,Ames 27131,Ky226,Nitrogen,2
+4437,Ames 27179,NC366,Nitrogen,2
+4438,Ames 27179,NC366,Nitrogen,2
+4439,PI 606330,DE2,Nitrogen,2
+4440,PI 606330,DE2,Nitrogen,2
+4441,PI 506253,Tzi18,Nitrogen,2
+4442,PI 506253,Tzi18,Nitrogen,2
+4443,PI 587124,CM105,Nitrogen,2
+4444,PI 587124,CM105,Nitrogen,2
+4445,PI 550440,B64,Nitrogen,2
+4446,PI 550440,B64,Nitrogen,2
+4447,PI 594046,B103,Nitrogen,2
+4448,PI 594046,B103,Nitrogen,2
+4449,Ames 27067,C49A,Nitrogen,2
+4450,Ames 27067,C49A,Nitrogen,2
+4451,Check,Check,Nitrogen,2
+4452,Check,Check,Nitrogen,2
+4453,PI 607521,A661,Nitrogen,2
+4454,PI 607521,A661,Nitrogen,2
+4455,Ames 19313,C123,Nitrogen,2
+4456,Ames 19313,C123,Nitrogen,2
+4457,Ames 24734,MS153,Nitrogen,2
+4458,Ames 24734,MS153,Nitrogen,2
+4459,Check,Check,Nitrogen,2
+4460,Check,Check,Nitrogen,2
+4461,Ames 20190,CM37,Nitrogen,2
+4462,Ames 20190,CM37,Nitrogen,2
+4463,PI 583352,Mo47,Nitrogen,2
+4464,PI 583352,Mo47,Nitrogen,2
+4465,Ames 27135,MEF156-55-2,Nitrogen,2
+4466,Ames 27135,MEF156-55-2,Nitrogen,2
+4467,Ames 27105,CO106,Nitrogen,2
+4468,Ames 27105,CO106,Nitrogen,2
+4469,Ames 28364,IA2132,Nitrogen,2
+4470,Ames 28364,IA2132,Nitrogen,2
+4471,Ames 19288,Oh43,Nitrogen,2
+4472,Ames 19288,Oh43,Nitrogen,2
+4473,Check,Check,Nitrogen,2
+4474,Check,Check,Nitrogen,2
+4475,Ames 27161,NC330,Nitrogen,2
+4476,Ames 27161,NC330,Nitrogen,2
+4477,Ames 27163,NC334,Nitrogen,2
+4478,Ames 27163,NC334,Nitrogen,2
+4479,PI 587145,NC268,Nitrogen,2
+4480,PI 587145,NC268,Nitrogen,2
+4481,Ames 27154,NC316,Nitrogen,2
+4482,Ames 27154,NC316,Nitrogen,2
+4483,Ames 19016,Va59,Nitrogen,2
+4484,Ames 19016,Va59,Nitrogen,2
+4501,Check,Check,Nitrogen,2
+4502,Check,Check,Nitrogen,2
+4503,Ames 27095,CML321,Nitrogen,2
+4504,Ames 27095,CML321,Nitrogen,2
+4505,Check,Check,Nitrogen,2
+4506,Check,Check,Nitrogen,2
+4507,PI 406112,A214N,Nitrogen,2
+4508,PI 406112,A214N,Nitrogen,2
+4509,Check,Check,Nitrogen,2
+4510,Check,Check,Nitrogen,2
+4511,Ames 27096,CML322,Nitrogen,2
+4512,Ames 27096,CML322,Nitrogen,2
+4513,PI 587130,4722,Nitrogen,2
+4514,PI 587130,4722,Nitrogen,2
+4515,Ames 27144,NC296,Nitrogen,2
+4516,Ames 27144,NC296,Nitrogen,2
+4517,Check,Check,Nitrogen,2
+4518,Check,Check,Nitrogen,2
+4519,Ames 27121,K64,Nitrogen,2
+4520,Ames 27121,K64,Nitrogen,2
+4521,PI 531084,NC258,Nitrogen,2
+4522,PI 531084,NC258,Nitrogen,2
+4523,Ames 27134,M162W,Nitrogen,2
+4524,Ames 27134,M162W,Nitrogen,2
+4525,PI 550558,DE811,Nitrogen,2
+4526,PI 550558,DE811,Nitrogen,2
+4527,Ames 27156,NC320,Nitrogen,2
+4528,Ames 27156,NC320,Nitrogen,2
+4529,PI 506246,Tzi8,Nitrogen,2
+4530,PI 506246,Tzi8,Nitrogen,2
+4531,PI 540745,Tzi11,Nitrogen,2
+4532,PI 540745,Tzi11,Nitrogen,2
+4533,PI 587147,Pa91,Nitrogen,2
+4534,PI 587147,Pa91,Nitrogen,2
+4535,Ames 27119,Il101T,Nitrogen,2
+4536,Ames 27119,Il101T,Nitrogen,2
+4537,PI 550522,T232,Nitrogen,2
+4538,PI 550522,T232,Nitrogen,2
+4539,Check,Check,Nitrogen,2
+4540,Check,Check,Nitrogen,2
+4541,Check,Check,Nitrogen,2
+4542,Check,Check,Nitrogen,2
+4543,NSL 81599,A659,Nitrogen,2
+4544,NSL 81599,A659,Nitrogen,2
+4545,Ames 19316,CM174,Nitrogen,2
+4546,Ames 19316,CM174,Nitrogen,2
+4547,Ames 23450,A556,Nitrogen,2
+4548,Ames 23450,A556,Nitrogen,2
+4549,PI 587138,A554,Nitrogen,2
+4550,PI 587138,A554,Nitrogen,2
+4551,Ames 19308,A634,Nitrogen,2
+4552,Ames 19308,A634,Nitrogen,2
+4553,PI 550483,B76,Nitrogen,2
+4554,PI 550483,B76,Nitrogen,2
+4555,Ames 19311,A641,Nitrogen,2
+4556,Ames 19311,A641,Nitrogen,2
+4557,Check,Check,Nitrogen,2
+4558,Check,Check,Nitrogen,2
+4559,Ames 27070,CM7,Nitrogen,2
+4560,Ames 27070,CM7,Nitrogen,2
+4561,PI 587129,H99,Nitrogen,2
+4562,PI 587129,H99,Nitrogen,2
+4563,Ames 20140,Mt42,Nitrogen,2
+4564,Ames 20140,Mt42,Nitrogen,2
+4565,Ames 27111,EP1,Nitrogen,2
+4566,Ames 27111,EP1,Nitrogen,2
+4567,PI 257507,F7,Nitrogen,2
+4568,PI 257507,F7,Nitrogen,2
+4569,Ames 27107,CO255,Nitrogen,2
+4570,Ames 27107,CO255,Nitrogen,2
+4571,Check,Check,Nitrogen,2
+4572,Check,Check,Nitrogen,2
+4573,PI 550566,N192,Nitrogen,2
+4574,PI 550566,N192,Nitrogen,2
+4575,Ames 27152,NC312,Nitrogen,2
+4576,Ames 27152,NC312,Nitrogen,2
+4577,Ames 27142,NC292,Nitrogen,2
+4578,Ames 27142,NC292,Nitrogen,2
+4579,PI 524969,SD44,Nitrogen,2
+4580,PI 524969,SD44,Nitrogen,2
+4581,Check,Check,Nitrogen,2
+4582,Check,Check,Nitrogen,2
+4583,PI 531085,NC262,Nitrogen,2
+4584,PI 531085,NC262,Nitrogen,2

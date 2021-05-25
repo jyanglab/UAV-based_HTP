@@ -1,0 +1,113 @@
+---
+title: "ENormalize the greenness index"
+output: NULL
+author: "Jinliang Yang"
+date: 03-19-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+### Normalized data
+
+```{r}
+dn <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv")
+dn$date <- as.factor(dn$date)
+dn$date <- factor(dn$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+
+
+fsize=18
+```
+
+# Dn using four different filtering types
+
+```{r}
+library(ggplot2)
+
+getpn <- function(dn, i=11){
+  dodge <- position_dodge(width = 0.6)
+  pn <- ggplot(dn, aes(x=date, y=dn[,i]*10000)) +
+  facet_grid(Filter.Type ~ .) +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9")) +
+  xlab("") +
+  ylab(names(dn)[i]) +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+  pn
+}
+
+### for all of them
+pdf("graphs/VI_4types_time_series.pdf", width=10, height=5)
+for(i in 11:20){
+  print(getpn(dn, i=i))
+}
+dev.off()
+
+### For check only
+pdf("graphs/VI_4types_time_series_check.pdf", width=10, height=5)
+for(i in 11:20){
+  print(getpn(subset(dn, Genotype.x %in% "Check"), i=i))
+}
+dev.off()
+
+```
+
+
+
+
+# Using only one filtering method
+
+```{r}
+library(ggplot2)
+
+d1 <- subset(dn, Filter.Type %in% "ExG 131")
+dodge <- position_dodge(width = 0.6)
+p1 <- ggplot(d1, aes(x=date, y=VARI)) +
+  #facet_grid(Filter.Type ~ .) +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9")) +
+  xlab("") +
+  ylab("VARI") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

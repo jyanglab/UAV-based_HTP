@@ -1,0 +1,8 @@
+The NW quadrant contains plot images of uniform size.  However, there are two plots that were shorter than the others, and so their images contain significant overlap from adjacent plots.  This issue was corrected in re-running those specific plots with boundaries of the correct size (in the NW2 folder).  However, Phenix also requires a minimum of 4 plots for a run, and so this folder also contains extra data for these unneeded plot images.
+The plots that ARE needed are Row 2, Range 4 (2281 & 2282) and Row 3, Range 4 (2279 & 2280).  Ignore entries pertaining to these plots in the NW folder output data (since they are redone with better plot boundaries in the NW2 folder output).
+The UNNEEDED plots in NW2 are Row 2, Range 5 and Row 3, Range 5 (ignore these entries in the output data).
+
+There is also one example of a corrupted output image from Phenix: 190830_djifc6310s_Aug30_NW2_row_2_range_4_rep_4_isref_1.tif
+I manually clipped the oversized reference rep image of the same plot from the original NW run (190830_djifc6310s_Aug30_NW_row_2_range_4_rep_4_isref_1.tif).  HOWEVER, data pertaining to this specific image HAS NOT yet been included in the NW or NW2 folders (the NW2 folder contains data based on the corrupted image for this particular plot, and the NW folder contains data for the full, unclipped image).  This is instead included separately in the base directory, in the Aug30_NW_row_2_range_4_rep_4_clipped_average and Aug30_NW_row_2_range_4_rep_4_clipped_canopy CSV files.
+
+Aug26 SW (Plot 4) has no images for Row 3, Range 3 (4379 & 4380, W182B), apparently because there was incomplete camera coverage of that part of the field on that particular day.

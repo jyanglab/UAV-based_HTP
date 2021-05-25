@@ -1,0 +1,81 @@
+---
+title: "Image Data 101"
+output: html_notebook
+author: Jinliang Yang
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+#knitr::opts_chunk$set(eval = FALSE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+[Modern Statistics for Modern Biology](http://web.stanford.edu/class/bios221/book/Chap-Images.html#Chap:Images). 
+
+# Chapter 11: Image Data
+
+EBImage currently supports three image file formats: `jpeg`, `png` and `tiff`. 
+
+```{r}
+## try http:// if https:// URLs are not supported
+
+# source("https://bioconductor.org/biocLite.R")
+# biocLite("EBImage")
+
+library("EBImage")
+
+files <- list.files(path="data/Havelock_West/", pattern="JPG", full.names = TRUE)
+p <- readImage(files[1])
+
+```
+
+
+## 11.3 Displaying images
+
+```{r}
+display(p)
+
+
+display(p, method = "raster")
+text(x = 85, y = 800, label = "A corn plot",
+     adj = 0, col = "orange", cex = 1.5)
+
+dim(p)
+hist(p)
+
+p
+```
+
+
+```{r}
+nuc = readImage(system.file("images", "nuclei.tif",
+                            package = "EBImage"))
+
+display(1 - nuc, method = "raster", all = TRUE)
+```
+
+
+## 11.6 Manupulating images
+
+Normalization
+```{r}
+n <- normalize(-p)
+display(p)
+```
+
+
+## 11.8 Linear Filters
+
+```{r}
+mosqrot   = EBImage::rotate(p, angle = 30)
+mosqshift = translate(mosq, v = c(40, 70))
+mosqflip  = flip(mosq)
+mosqflop  = flop(mosq)
+
+display(p)
+
+apply(p, 3, range)
+```
+
+

@@ -1,0 +1,130 @@
+---
+title: "ENormalize the greenness index"
+output: NULL
+author: "Jinliang Yang"
+date: 03-19-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+# take a look at the Canopy data
+
+1. For each plot, we have about 237 genotypes including the "check" plants.
+2. For each genotype, we have multiple reps upto 8?
+3. We used 9 ways to filter the data
+- ExG135 to ExG140
+- Otsu pre
+- Otso post
+- Custom
+4. Additionally, in the table, we have Image id, Light.Value, Average.Saturation, 
+Reference.Rep (1 indicates the reference)
+
+
+### Normalize by light value and color saturation
+
+```{r}
+normcolor <- function(d=df0){
+  i1 <- which(names(d) == "ExG")
+  i2 <- which(names(d) == "Woebbecke..abs.")
+  for(idx in i1:i2){
+    d[,idx] <- d[,idx]/d$Light.Value/d$Average.Saturation
+  }
+  return(d)
+}
+df0 <- read.csv("cache/VI_average_fb2019_n46364_ref.csv")
+dn <- normcolor(d=df0)
+write.table(dn, "cache/VI_average_fb2019_n46364_ref_ncolor.csv", sep=",", row.names=FALSE, quote=FALSE)
+
+```
+
+
+------------------------------------
+
+# Get Stat
+
+```{r}
+###
+getstat1 <- function(df=check){
+
+  out <- data.frame()
+  nms <- names(df)
+  i1 <- which(nms == "ExG")
+  i2 <- which(nms == "Woebbecke..abs.")
+  
+  for(i in i1:i2){
+    fit <- lm(df[, i] ~ Treatment + date, data=df)
+    res <- summary(fit)$coefficients
+    tem <- data.frame(VI=nms[i], eff=res[2,1], pval=res[2,4])
+    out <- rbind(out, tem)
+  }
+  return(out)
+}
+
+dn <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv") 
+check <- subset(dn, Genotype.x %in% "Check" & Reference.Rep == 1 & Filter.Type %in% "ExG 131")
+
+out <- getstat1(df=check)
+write.table(out, "cache/pval_check_VIs.csv", sep=",", row.names = FALSE, quote=FALSE)
+```
+
+
+#### Plot check plants
+
+```{r}
+library(ggplot2)
+library(tidyr)
+
+d1 <- check
+d1$date <- as.factor(d1$date)
+
+i1 <- which(names(d1) %in% "ExG2")
+i2 <- which(names(d1) %in% "Woebbecke..abs.")
+idx <- names(d1)[c(i1:(i2-2), i2)]
+df1 <- gather(d1[, c("date", "Treatment", idx)], key=VI, value=value, 3:10)
+
+df1$date <- factor(df1$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+
+df1$VI <- factor(df1$VI, 
+                  levels = c("ExG2", "GLI", "MGR", "NGR", "RGB", "VARI", "VEG", "Woebbecke..abs."),
+                  labels = c("ExG", "GLI", "MGR", "NGR", "RGB", "VARI", "VEG", "Woebbecke"))
+
+fsize=18
+dodge <- position_dodge(width = 0.6)
+p1 <- ggplot(df1, aes(x=date, y=value*1000)) +
+  facet_grid(VI ~ ., scales = "free") +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9"), name = "", labels = c("+N", "-N")) +
+  xlab("") +
+  ylab("Normalized Vegetation indices") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.y = element_text(size = 14, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p1
+
+```
+
+
+```{r}
+pdf(paste0("graphs/VIs_check.pdf"), width=12, height = 12)
+p1
+dev.off()
+```
+
+
+
