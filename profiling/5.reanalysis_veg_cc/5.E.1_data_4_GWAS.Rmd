@@ -25,6 +25,18 @@ names(geno)[c(3,7)] <- c("Genotype", "Canopy_Coverage")
 write.table(geno, "largedata/canopy_coverage_row10535_days.csv", sep=",", row.names=FALSE, quote=FALSE)
 ```
 
+Including checks
+```{r}
+df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
+
+geno <- subset(df0, !(Genotype.x %in% "Check") & Reference.Rep == 1 &  Filter.Type %in% "ExG 131")
+#geno <- subset(geno, Percent.Cover > 2)
+
+geno <- geno[, c("Row", "Row.Numbers", "Genotype.x", "Pedigree", "Treatment", "date", "Percent.Cover")]
+names(geno)[c(3,7)] <- c("Genotype", "Canopy_Coverage")
+write.table(geno, "largedata/canopy_coverage_row10535_days.csv", sep=",", row.names=FALSE, quote=FALSE)
+```
+
 ### VIs
 
 ### Normalized data
