@@ -16,8 +16,15 @@ This is a research repository for a paper entitled "A UAV-based high-throughput 
 4. The resulting images were then processed using a variety of vegetation indices to calculate average greenness ratings for each genotype at the point in the growing season the images were collected (f).  
 - `path for the code`
 
+# Figures
 
+Some of the main figures can be reproduced using the following code:
 
+### Figure 2
+
+`doc/fig2_cc_check.Rmd`
+
+----------------------------------
 # Project Guideline
 
 - To guide visitors having a better sense about the project layout, here we briefly introduce the specific purposes of the [dir system](https://jyanglab.github.io/2017-01-07-project/). The layout of dirs is based on the idea borrowed from [ProjectTemplate](http://projecttemplate.net/architecture.html).
