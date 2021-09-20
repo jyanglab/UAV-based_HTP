@@ -8,7 +8,7 @@ This is a research repository for a paper entitled "A UAV-based high-throughput 
 
 ![image](https://user-images.githubusercontent.com/790051/134026671-7c14ccb1-296b-4f09-adff-2ef1d04a2a02.png)
 
-1. Individual UAV images (a) were used to generate an orthomosaic model (b) using [Pix4D]() and [Plot Phenix]() software.  
+1. Individual UAV images (a) were used to generate an orthomosaic model (b) using [Pix4D](https://www.pix4d.com/) and [Plot Phenix](https://www.plotphenix.com/) software.  
 2. The partitioned genotypes (c) were extracted from the original UAV images by Plot Phenix, generating multiple replicates per plot. 
 3. These images were then filtered using binary masks (d) to remove non-foliage pixels (e).  
 - `path for the code`
@@ -16,8 +16,15 @@ This is a research repository for a paper entitled "A UAV-based high-throughput 
 4. The resulting images were then processed using a variety of vegetation indices to calculate average greenness ratings for each genotype at the point in the growing season the images were collected (f).  
 - `path for the code`
 
+# Figures
 
+Some of the main figures can be reproduced using the following code:
 
+### Figure 2
+
+`doc/fig2_cc_check.Rmd`
+
+----------------------------------
 # Project Guideline
 
 - To guide visitors having a better sense about the project layout, here we briefly introduce the specific purposes of the [dir system](https://jyanglab.github.io/2017-01-07-project/). The layout of dirs is based on the idea borrowed from [ProjectTemplate](http://projecttemplate.net/architecture.html).
