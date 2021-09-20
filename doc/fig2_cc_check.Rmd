@@ -8,7 +8,7 @@ date: 03-23-2021
 ## Normalize path
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
-knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+knitr::opts_knit$set(root.dir=normalizePath('..//')) 
 #library(tidyverse)
 ```
 
@@ -201,4 +201,5 @@ plot_grid(
 )
 dev.off()
 ```
+
 

@@ -50,7 +50,7 @@ df0 <- merge(df, fb, by="Row", all.x=TRUE)
 
 df0$date <- as.character(df0$date)
 df0[df0$date == "J6", ]$date <- "July6"
-write.table(df0, "cache/canopy_coverage_master_row447720.csv", sep=",", row.names=FALSE, quote=FALSE)
+write.table(df0, "largedata/canopy_coverage_master_row447720.csv", sep=",", row.names=FALSE, quote=FALSE)
 ```
 
 
