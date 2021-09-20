@@ -12,17 +12,6 @@ knitr::opts_knit$set(root.dir=normalizePath('..//'))
 #library(tidyverse)
 ```
 
-
-### Overall data
-
-```{r}
-df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
-# select check and reference rep
-check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
-
-write.csv(check, "cache/check_ref.csv", row.names=FALSE, quote=FALSE)
-```
-
 ### Check plots
 
 determine which filteration methods perform the best
@@ -85,6 +74,7 @@ p1 <- ggplot(d1, aes(x=date, y=Percent.Cover)) +
           legend.text = element_text(size=fsize-2))
 p1
 ```
+### Adjusted P-value
 
 ```{r}
 getstat2 <- function(df=check){
@@ -105,15 +95,19 @@ out2$date <- factor(out2$date,
                   levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
                   labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
 out2 <- out2[order(out2$date),]
+out2$fdr <- p.adjust(out2$pval, method = "fdr")
 write.table(out2, "CC_pval_checks_ExG131.csv", sep=",", row.names=FALSE, quote=FALSE)
 ```
 
-### Plot the different genotypes
+
+
+----------------------------------------
+# Plot the different genotypes
 
 
 ```{r}
 # select geno and reference rep
-geno <- subset(df0, !(Genotype.x %in% "Check") & Reference.Rep == 1)
+geno <- read.csv("cache/geno_ref.csv")
 
 g1 <- subset(geno, Filter.Type %in% "ExG 131")
 
@@ -151,6 +145,7 @@ out3$date <- factor(out3$date,
                   levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
                   labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
 out3 <- out3[order(out3$date),]
+out3$fdr <- p.adjust(out3$pval, method = "fdr")
 write.table(out3, "CC_pval_genotype_ExG131.csv", sep=",", row.names=FALSE, quote=FALSE)
 
 ```
