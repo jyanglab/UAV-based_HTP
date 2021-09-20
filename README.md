@@ -8,10 +8,13 @@ This is a research repository for a paper entitled "A UAV-based high-throughput 
 
 ![image](https://user-images.githubusercontent.com/790051/134026671-7c14ccb1-296b-4f09-adff-2ef1d04a2a02.png)
 
-1. Individual UAV images (a) were used to generate an orthomosaic model (b) using Pix4D and Plot Phenix software.  
-2. The partitioned genotypes (c) were extracted from the original UAV images by Plot Phenix, generating multiple replicates per plot.  These images were then filtered using binary masks (d) to remove non-foliage pixels (e).  
+1. Individual UAV images (a) were used to generate an orthomosaic model (b) using [Pix4D]() and [Plot Phenix]() software.  
+2. The partitioned genotypes (c) were extracted from the original UAV images by Plot Phenix, generating multiple replicates per plot. 
+3. These images were then filtered using binary masks (d) to remove non-foliage pixels (e).  
+- `path for the code`
 
 4. The resulting images were then processed using a variety of vegetation indices to calculate average greenness ratings for each genotype at the point in the growing season the images were collected (f).  
+- `path for the code`
 
 
 
