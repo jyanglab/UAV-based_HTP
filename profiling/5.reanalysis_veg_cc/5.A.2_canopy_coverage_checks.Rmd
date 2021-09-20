@@ -21,6 +21,10 @@ df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
 check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
 
 write.csv(check, "cache/check_ref.csv", row.names=FALSE, quote=FALSE)
+
+geno <- subset(df0, !(Genotype.x %in% "Check") & Reference.Rep == 1)
+write.csv(geno, "cache/geno_ref.csv", row.names=FALSE, quote=FALSE)
+
 ```
 
 ### Check plots
