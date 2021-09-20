@@ -25,13 +25,24 @@ names(geno)[c(3,7)] <- c("Genotype", "Canopy_Coverage")
 write.table(geno, "largedata/canopy_coverage_row10535_days.csv", sep=",", row.names=FALSE, quote=FALSE)
 ```
 
+Including checks
+```{r}
+df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
+
+geno <- subset(df0, Reference.Rep == 1 &  Filter.Type %in% "ExG 131")
+#geno <- subset(geno, Percent.Cover > 2)
+
+geno <- geno[, c("Row", "Row.Numbers", "Genotype.x", "Pedigree", "Treatment", "date", "Percent.Cover")]
+names(geno)[c(3,7)] <- c("Genotype", "Canopy_Coverage")
+write.table(geno, "largedata/canopy_coverage_row12095_days_checks.csv", sep=",", row.names=FALSE, quote=FALSE)
+```
+
 ### VIs
 
 ### Normalized data
 
 ```{r}
 dn <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv")
-
 
 dn <- subset(dn, !(Genotype.x %in% "Check"))
 df1 <- subset(dn, Filter.Type %in% "ExG 131" & Reference.Rep == 1)
@@ -54,6 +65,29 @@ write.table(df2, "largedata/VIs_row10104_days.csv", sep=",", row.names=FALSE, qu
 ```
 
 
+including checks
 
+```{r}
+dn <- read.csv("cache/VI_average_fb2019_n46364_ref_ncolor.csv")
+
+#dn <- subset(dn, !(Genotype.x %in% "Check"))
+df1 <- subset(dn, Filter.Type %in% "ExG 131" & Reference.Rep == 1)
+
+df1 <- df1[, c(-11, -19)]
+names(df1)[c(11,18)] <- c("ExG", "Woebbecke")
+
+df2 <- df1[, c("Row", "Row.Numbers", "Genotype.x", "Pedigree", "Treatment", "date", "ExG", "RGB", "NGR", "GLI", "MGR", "VARI", "VEG", "Woebbecke")]
+df2$ExG <- df2$ExG*1000
+df2$RGB <- df2$RGB*1000
+df2$NGR <- df2$NGR*1000
+df2$GLI <- df2$GLI*1000
+df2$MGR <- df2$MGR*1000
+df2$VARI <- df2$VARI*1000
+df2$VEG <- df2$VEG*1000
+df2$Woebbecke <- df2$Woebbecke*1000
+
+names(df2)[3] <- "Genotype"
+write.table(df2, "largedata/VIs_row11591_days_checks.csv", sep=",", row.names=FALSE, quote=FALSE)
+```
 
 
