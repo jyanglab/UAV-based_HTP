@@ -1,0 +1,57 @@
+---
+title: "Figure3a: VI Average"
+output: NULL
+author: "Jinliang Yang"
+date: 09-03-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../')) 
+#library(tidyverse)
+```
+
+### Left panel:
+
+```{r}
+o1 <- load("cache/r_time_series.RData")
+o2 <- load("cache/VEG_n.RData")
+o3 <- load("cache/Woebbecke_LA.RData")
+o4 <- load("cache/VARI_20kw.RData")
+p2
+
+cor.test(n$value, n$Nitrogen)$p.value
+cor.test(w$value,w$LA)$p.value
+
+cor.test(vari$Weight.of.20.seeds, vari$value)$p.value
+
+library(plyr)
+a <- ddply(df, .(trait), summarise,
+           mean=mean(abs(cor)),
+           sd=sd(abs(cor)))
+```
+```{r}
+library("cowplot")
+pright <- plot_grid(
+  pn,pla, pv,
+  labels = c('B', "C", "D"), label_size = 20, ncol = 1
+)
+pright
+```
+
+### Composite Figure
+
+```{r}
+
+
+# arrange two plots into one column
+pdf("graphs/VI_cor_traits.pdf", width=12, height = 10)
+pright <- plot_grid(
+  pn,pla, pv,
+  labels = c('B', "C", "D"), label_size = 20, ncol = 1
+)
+plot_grid(p2, pright, labels=c("A", ""), rel_widths=c(1,1), label_size = 20, nrow = 1)
+dev.off()
+```
+

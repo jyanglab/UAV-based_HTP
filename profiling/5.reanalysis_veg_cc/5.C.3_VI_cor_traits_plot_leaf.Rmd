@@ -111,8 +111,12 @@ w$value <- w$value*1000
 w <- subset(w, value < 40)
 fit_la <- lm(LA ~ value, data=w)
 
+w[w$Treatment == "Nitrogen",]$Treatment <- "+N"
+w[w$Treatment == "No Nitrogen",]$Treatment <- "-N"
+
 pla <- ggplot(w, aes(x=value, y=LA/100)) +
   geom_point(aes(color=Treatment)) +
+  facet_grid(~Treatment) +
   # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   geom_smooth(method = "lm") +
@@ -144,8 +148,11 @@ n$value <- n$value*1000
 #w <- subset(w, value < 40)
 fit_n <- lm(Nitrogen ~ value, data=n)
 
+n[n$Treatment == "Nitrogen",]$Treatment <- "+N"
+n[n$Treatment == "No Nitrogen",]$Treatment <- "-N"
 pn <- ggplot(n, aes(x=value, y=Nitrogen)) +
   geom_point(aes(color=Treatment)) +
+  facet_grid(~Treatment) +
   # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   geom_smooth(method = "lm") +
@@ -163,7 +170,7 @@ pn <- ggplot(n, aes(x=value, y=Nitrogen)) +
           strip.text.x = element_text(size = 16, face = "bold"),
           axis.title=element_text(size=fsize-2, face="bold"),
           #axis.text.x = element_text(angle = 15, hjust=0.8),
-          legend.position = c(0.8,0.2), 
+          legend.position = "none", 
           legend.title = element_text(size=fsize-2, face="bold"),
           legend.text = element_text(size=fsize-2))
 pn

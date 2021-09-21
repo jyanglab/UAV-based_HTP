@@ -22,7 +22,12 @@ Some of the main figures can be reproduced using the following code:
 
 ### Figure 2
 
-`doc/fig2_cc_check.Rmd`
+- `doc/fig2_cc_check.Rmd`
+
+### Figure 3
+
+- `doc/fig3A.Rmd`
+- `doc/fig3B.Rmd`
 
 ----------------------------------
 # Project Guideline

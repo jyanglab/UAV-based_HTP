@@ -126,10 +126,10 @@ fit1 <- lm(Weight.of.20.seeds ~ value, data=vari)
 
 pv <- ggplot(vari, aes(x=value, y=Weight.of.20.seeds)) +
   geom_point(aes(color=nitrogen)) +
+  facet_grid(~nitrogen) +
   # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   geom_smooth(method = "lm") +
-  
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   xlab("VARI") +
   ylab("20 Kernel Weight") +

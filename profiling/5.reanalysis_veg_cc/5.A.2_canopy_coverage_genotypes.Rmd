@@ -46,6 +46,20 @@ avg[avg$mean < 1, ]$type <- "negative"
 
 ```
 
+## revision
+
+```{r}
+b1 <- subset(m, ratio >1)
+
+length(unique(m$Genotype.x)) #225
+length(unique(b1$Genotype.x))
+
+s1 <- subset(m, ratio <1)
+length(unique(s1$Genotype.x))
+
+t.test(m$mcov_pn, m$mcov_mn, paired = TRUE)
+```
+
 
 ```{r}
 library(ggplot2)
