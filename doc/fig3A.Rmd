@@ -31,6 +31,10 @@ a <- ddply(df, .(trait), summarise,
            mean=mean(abs(cor)),
            sd=sd(abs(cor)))
 ```
+
+
+### Figure 3 B-D:
+
 ```{r}
 library("cowplot")
 pright <- plot_grid(
