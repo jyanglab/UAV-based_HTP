@@ -1,0 +1,57 @@
+---
+title: "Canopy Coverage: check plants"
+output: NULL
+author: Jinliang Yang
+date: 03-23-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+#library(tidyverse)
+```
+
+
+### Overall data
+
+```{r}
+df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
+# select check and reference rep
+check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
+
+```
+
+### Check plots
+
+determine which filteration methods perform the best
+
+```{r}
+library(plyr)
+check <- subset(check, Percent.Cover > 20)
+diff <- ddply(check, .(Filter.Type, Treatment), summarize,
+              mean=mean(Percent.Cover),
+              v=var(Percent.Cover))
+
+### get statistics tests
+
+getstat <- function(df=check){
+  methods <- as.character(unique(df$Filter.Type))
+  out <- data.frame()
+  for(i in 1:length(methods)){
+    sub <- subset(df, Filter.Type %in% methods[i])
+    test <- t.test(subset(sub, Treatment == "Nitrogen")$Percent.Cover, subset(sub, Treatment == "No Nitrogen")$Percent.Cover)$p.value
+    tem <- data.frame(method=methods[i], pval=test)
+    out <- rbind(out, tem)
+  }
+  return(out)
+}
+
+ftype <- getstat(df=check)
+
+```
+Based on the results, use ExG 131 as the filteration methods.
+
+
+
+
