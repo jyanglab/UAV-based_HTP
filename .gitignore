@@ -3,5 +3,10 @@
 .RData
 .Ruserdata
 largedata/
+<<<<<<< HEAD
+slurm-log/
+slurm-script/
+=======
 slurm-script/
 slurm-log/
+>>>>>>> 8b71b5a8c3cf37904ff106d1aa206f7053a8483d

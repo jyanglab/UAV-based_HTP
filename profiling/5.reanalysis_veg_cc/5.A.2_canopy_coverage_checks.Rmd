@@ -16,17 +16,23 @@ knitr::opts_knit$set(root.dir=normalizePath('../../'))
 ### Overall data
 
 ```{r}
-df0 <- read.csv("cache/canopy_coverage_master_row447720.csv")
+df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
+# select check and reference rep
+check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
+
+write.csv(check, "cache/check_ref.csv", row.names=FALSE, quote=FALSE)
+
+geno <- subset(df0, !(Genotype.x %in% "Check") & Reference.Rep == 1)
+write.csv(geno, "cache/geno_ref.csv", row.names=FALSE, quote=FALSE)
+
 ```
 
 ### Check plots
 
 determine which filteration methods perform the best
 ```{r}
-# select check and reference rep
-check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
 
-
+check <- read.csv("cache/check_ref.csv")
 library(plyr)
 check <- subset(check, Percent.Cover > 20)
 diff <- ddply(check, .(Filter.Type, Treatment), summarize,

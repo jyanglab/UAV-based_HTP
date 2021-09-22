@@ -1,0 +1,200 @@
+---
+title: "Canopy Coverage: check plants"
+output: NULL
+author: Jinliang Yang
+date: 03-23-2021
+---
+
+## Normalize path
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('..//')) 
+#library(tidyverse)
+```
+
+### Check plots
+
+determine which filteration methods perform the best
+```{r}
+
+check <- read.csv("cache/check_ref.csv")
+library(plyr)
+check <- subset(check, Percent.Cover > 20)
+diff <- ddply(check, .(Filter.Type, Treatment), summarize,
+              mean=mean(Percent.Cover))
+
+### get statistics tests
+
+getstat <- function(df=check){
+  methods <- as.character(unique(df$Filter.Type))
+  out <- data.frame()
+  for(i in 1:length(methods)){
+    sub <- subset(df, Filter.Type %in% methods[i])
+    test <- t.test(subset(sub, Treatment == "Nitrogen")$Percent.Cover, subset(sub, Treatment == "No Nitrogen")$Percent.Cover)$p.value
+    tem <- data.frame(method=methods[i], pval=test)
+    out <- rbind(out, tem)
+  }
+  return(out)
+}
+
+ftype <- getstat(df=check)
+
+```
+Based on the results, use ExG 131 as the filteration methods.
+
+
+
+```{r}
+library(ggplot2)
+d1 <- subset(check, Filter.Type %in% "ExG 131")
+d1$date <- as.factor(d1$date)
+
+fsize=18
+d1$date <- factor(d1$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+
+dodge <- position_dodge(width = 0.6)
+p1 <- ggplot(d1, aes(x=date, y=Percent.Cover)) +
+  #facet_grid(Filter.Type ~ .) +
+  geom_violin(aes(fill = Treatment), position = dodge, trim=FALSE) + 
+  geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  scale_fill_manual(values=c("#E69F00", "#56B4E9"), name = "", labels = c("+N", "-N")) +
+  xlab("") +
+  ylab("Canopy Coverage (%)") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = c(0.05, 0.9), 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p1
+```
+### Adjusted P-value
+
+```{r}
+getstat2 <- function(df=check){
+  d <- as.character(unique(df$date))
+  out <- data.frame()
+  for(i in 1:length(d)){
+    sub <- subset(df, date %in% d[i])
+    test <- t.test(subset(sub, Treatment == "Nitrogen")$Percent.Cover, subset(sub, Treatment == "No Nitrogen")$Percent.Cover)
+    tem <- data.frame(date=d[i], pval=test$p.value, PN=test$estimate[1], MN=test$estimate[2])
+    out <- rbind(out, tem)
+  }
+  out$diff <- out$PN - out$MN
+  return(out)
+}
+
+out2 <- getstat2(df=check)
+out2$date <- factor(out2$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+out2 <- out2[order(out2$date),]
+out2$fdr <- p.adjust(out2$pval, method = "fdr")
+write.table(out2, "CC_pval_checks_ExG131.csv", sep=",", row.names=FALSE, quote=FALSE)
+```
+
+
+
+----------------------------------------
+# Plot the different genotypes
+
+
+```{r}
+# select geno and reference rep
+geno <- read.csv("cache/geno_ref.csv")
+
+g1 <- subset(geno, Filter.Type %in% "ExG 131")
+
+library(plyr)
+### mean coverage in plus N plots
+m1 <- ddply(g1, .(date, Treatment, Pedigree), summarise,
+            mcov = mean(Percent.Cover))
+pn <- subset(m1, Treatment == "Nitrogen")
+names(pn)[4] <- "mcov_pn"
+pn$uid <- paste(pn$date, pn$Pedigree, sep="_")
+
+mn <- subset(m1, Treatment == "No Nitrogen")
+names(mn)[4] <- "mcov_mn"
+mn$uid <- paste(mn$date, mn$Pedigree, sep="_")
+
+m <- merge(pn[,c(1,3:5)], mn[,4:5], by="uid")
+m$ratio <- m$mcov_pn/m$mcov_mn
+
+
+###
+getstat3 <- function(df=m){
+  d <- as.character(unique(df$date))
+  out <- data.frame()
+  for(i in 1:length(d)){
+    sub <- subset(df, date %in% d[i])
+    test <- t.test(sub$mcov_pn, sub$mcov_mn, paired = TRUE)
+    tem <- data.frame(date=d[i], diff=test$estimate, pval=test$p.value, ratio=mean(sub$mcov_pn/sub$mcov_mn))
+    out <- rbind(out, tem)
+  }
+  return(out)
+}
+
+out3 <- getstat3(df=m)
+out3$date <- factor(out3$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+out3 <- out3[order(out3$date),]
+out3$fdr <- p.adjust(out3$pval, method = "fdr")
+write.table(out3, "CC_pval_genotype_ExG131.csv", sep=",", row.names=FALSE, quote=FALSE)
+
+```
+
+
+```{r}
+fsize=18
+
+m <- subset(m, ratio < 2)
+m$date <- as.factor(m$date)
+
+m$date <- factor(m$date, 
+                  levels = c("July6", "Aug12", "Aug14", "Aug16", "Aug20", "Aug22", "Aug23", "Aug26", "Aug30",  "Sept1", "Sept3", "Sept5"),
+                  labels =c("July 6", "Aug 12", "Aug 14", "Aug 16", "Aug 20", "Aug 22", "Aug 23", "Aug 26", "Aug 30",  "Sept 1", "Sept 3", "Sept 5"))
+
+p2 <- ggplot(m, aes(x=date, y=ratio)) +
+  #facet_grid(Filter.Type ~ .) +
+  geom_violin(trim=FALSE, fill="grey") + 
+  # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  geom_boxplot(width=.1, outlier.colour=NA) +
+  # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
+  xlab("") +
+  ylab("Canopy Coverage (+N/-N)") +
+      geom_hline(yintercept=1, linetype="dashed", 
+                color = "red") +
+  theme_classic() +
+  theme(plot.title = element_text(size=20, face = "bold"), 
+          axis.text=element_text(size=16, face="bold"),
+          strip.text.x = element_text(size = 16, face = "bold"),
+          axis.title=element_text(size=fsize-2, face="bold"),
+          #axis.text.x = element_text(angle = 15, hjust=0.8),
+          legend.position = "top", 
+          legend.title = element_text(size=fsize-2, face="bold"),
+          legend.text = element_text(size=fsize-2))
+p2
+```
+
+
+```{r}
+library("cowplot")
+
+# arrange two plots into one column
+pdf("graphs/canopy_coverage.pdf", width=12, height = 10)
+plot_grid(
+  p1, p2,
+  labels = c('A', 'B'), label_size = 20, ncol = 1
+)
+dev.off()
+```
+
+

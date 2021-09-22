@@ -122,14 +122,21 @@ d <- gather(d0, key=index, value=value, 7:ncol(d0))
 ```{r}
 vari <- subset(d, index %in% "VARI")
 vari$value <- vari$value*1000
-fit1 <- lm(Weight.of.20.seeds ~ value, data=vari)
+
+
+m1 <- subset(vari, nitrogen=="+N")
+p1 <- cor.test(m1$Weight.of.20.seeds, m1$value)
+# r=0.4520034, 1.841943e-16
+m2 <- subset(vari, nitrogen=="-N")
+p2 <- cor.test(m2$Weight.of.20.seeds, m2$value)
+# r=0.3025657, 4.882499e-06
 
 pv <- ggplot(vari, aes(x=value, y=Weight.of.20.seeds)) +
   geom_point(aes(color=nitrogen)) +
+  facet_grid(~nitrogen) +
   # geom_boxplot(aes(group = interaction(date, Treatment)), width=.1, outlier.colour=NA, position = dodge) +
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   geom_smooth(method = "lm") +
-  
   # geom_jitter(shape=16, position=position_jitter(0.2), fill=Treatment) + 
   xlab("VARI") +
   ylab("20 Kernel Weight") +
@@ -145,5 +152,5 @@ pv <- ggplot(vari, aes(x=value, y=Weight.of.20.seeds)) +
           legend.text = element_text(size=fsize-2))
 pv
 
-save(file="cache/VARI_20kw.RData", list=c("pv", "vari", "fit1"))
+save(file="cache/VARI_20kw.RData", list=c("pv", "vari"))
 ```
