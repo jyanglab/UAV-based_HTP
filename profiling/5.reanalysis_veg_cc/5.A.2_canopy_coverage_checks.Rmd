@@ -17,6 +17,7 @@ knitr::opts_knit$set(root.dir=normalizePath('../../'))
 
 ```{r}
 df0 <- read.csv("largedata/canopy_coverage_master_row447720.csv")
+length(unique(df0$Filename))
 # select check and reference rep
 check <- subset(df0, Genotype.x %in% "Check" & Reference.Rep == 1)
 
